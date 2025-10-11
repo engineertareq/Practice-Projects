@@ -330,11 +330,11 @@ background-size: cover;
 background-color: var(--whiteColor);
 }
 .responsive-navbar .offcanvas-header {
-margin: 22px 22px 0;
+margin: 10px 10px 0;
 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 position: relative;
 z-index: 2;
-padding: 0 0 22px 0;
+padding: 0 0 10px 0;
 }
 .responsive-navbar .offcanvas-header .close-btn {
 background-color: transparent;
@@ -351,7 +351,7 @@ top: 2px;
 color: var(--mainColor);
 }
 .responsive-navbar .offcanvas-header .logo {
-max-width: 150px;
+max-width: 50px;
 }
 .responsive-navbar .offcanvas-body {
 padding: 30px 25px;
@@ -717,7 +717,7 @@ font-weight: 500;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .clgun.offcanvas .offcanvas-header .logo{
-    max-width: 150px
+    max-width: 50px
 }
 .clgun .offcanvas-body .search-box .form-control {
     font-size: 14px;
