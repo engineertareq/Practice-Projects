@@ -105,7 +105,6 @@
   right: 80px;
   z-index: 99;
   text-align: center;
-  color:#fff;
   font-size: 30px;
   display: none;
 }
@@ -209,7 +208,7 @@ footer .footer-event .item h6:hover,.page-breadcrum ul li:last-child,.page-bread
 .course-details-page .course-details-content .course-curriculum .course-curriculum-panel .panel-body a:hover,
 header .top-header div>ul>li .ficon:before,.popular-course .course-item-wrapper .item:hover .text h4 a,
 .popular-course .course-item-wrapper .single-course-item:hover .text h4 a {
-  color:#cd2122;
+  color:#c1c3ab;
 }
 .p-color-bg,header .top-header div.right-side>ul>li a:hover,
 .main-menu-wrapper,footer .top-footer .footer-about ul li a:hover,
@@ -223,7 +222,8 @@ header .top-header div>ul>li .ficon:before,.popular-course .course-item-wrapper 
 .blog-details-page .blog-details-page-content .main-post-content .admin-text ul.share-icon li a:hover,
 .blog-details-page .blog-details-page-content .main-post-content .single-comment .reply:hover,
 .course-details-page .course-details-content .take-course-button:hover {
-  background: #cd2122;
+  background: rgba(185, 169, 169, 0.238)
+/* Sticky Header bg color */
 }
 .theme-bg-color {
   background: #ededed;
@@ -236,7 +236,7 @@ header .top-header div>ul>li .ficon:before,.popular-course .course-item-wrapper 
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(238, 5, 5, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
@@ -356,7 +356,7 @@ header .top-header {
 }
 .bootstrap-select.btn-group .dropdown-menu li:hover,
 .bootstrap-select.btn-group .dropdown-menu li.selected {
-  background: #cd2122;
+  background: #5b0cc9;
 }
 .bootstrap-select.btn-group .dropdown-menu li:hover a,
 .bootstrap-select.btn-group .dropdown-menu li.selected a {
@@ -397,8 +397,9 @@ header.inner-header .top-header {
 .main-menu-wrapper .nav>li {
   margin: 0 16px;
 }
+/* //text color of main menu text */
 .main-menu-wrapper .nav>li>a {
-  color:#fff;
+  color:#0e0d0d;
   padding: 0;
   line-height: 100px;
   position: relative;
@@ -429,10 +430,11 @@ header.inner-header .top-header {
   top:0;
   right:0;
   background:transparent;
-  color:#FFF;
+  color:#000000;
   font-size: 22px;
   text-align: center;
   border-left: 1px solid #fff;
+
 }
 .main-menu-wrapper form {
   width:225px;
