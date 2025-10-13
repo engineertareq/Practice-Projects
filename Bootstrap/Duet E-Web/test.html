@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhaka University & Engineering Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        :root {
+            --primary-blue: #1a3a8f;
+            --secondary-blue: #0d2568;
+            --accent-blue: #4d7cfe;
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --bg-light: #f8fafc;
+            --border-light: #e2e8f0;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--text-light);
+            padding: 60px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIwMCA4MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTIwMCAwSDB2ODAwaDEyMDBWMHpNMTIwMCAwIiBmaWxsPSIjMWExYTg1IiBmaWxsLW9wYWNpdHk9Ii4wNSIvPjxwYXRoIGQ9Ik0xMjAwIDBIMHY4MDBoMTIwMFYweiIgZmlsbD0idXJsKCNhKSIvPjxwYXRoIGQ9Ik0xMjAwIDBIMHY4MDBoMTIwMFYweiIgZmlsbD0idXJsKCNiKSIvPjxwYXRoIGQ9Ik0xMjAwIDBIMHY4MDBoMTIwMFYweiIgZmlsbD0idXJsKCNjKSIvPjwvZz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSI4MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iLjAyIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9Ii4wMiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJiIiB4MT0iMTIwMCIgeTE9IjAiIHgyPSIxMjAwIiB5Mj0iODAwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9Ii4wMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIuMDIiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYyIgeDE9IjYwMCIgeTE9IjAiIHgyPSI2MDAiIHkyPSI4MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iLjAyIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9Ii4wMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjwvc3ZnPg==');
+            opacity: 0.1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--text-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary-blue);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-menu li a:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--text-light);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .date-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .date-badge i {
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent-blue);
+            color: var(--text-light);
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #3a6bf5;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--text-light);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .content {
+            padding: 100px 0;
+        }
+
+        .vision-section {
+            background-color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin: -60px 0 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 10;
+        }
+
+        .vision-section h2 {
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .vision-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+
+        .about-content p {
+            margin-bottom: 30px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            height: 400px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(26, 58, 143, 0.1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+        }
+
+        .feature-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: var(--primary-blue);
+            color: var(--text-light);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent-blue);
+        }
+
+        .footer-column p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            opacity: 1;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-image {
+                height: 300px;
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .vision-section {
+                padding: 60px 30px;
+                margin: -40px 20px 40px;
+            }
+            
+            .vision-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header {
+                padding: 40px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .date-badge {
+                font-size: 0.8rem;
+                padding: 8px 16px;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+            
+            .feature-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <div class="logo-icon">DUET</div>
+                    <div class="logo-text">DUET Gazipur</div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            
+            <div class="hero">
+                <div class="date-badge">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>October 14, 2025 | Dhaka, Bangladesh</span>
+                </div>
+                <h1>Welcome to Dhaka University of Engineering & Technology</h1>
+                <p>Leading the way in engineering education, research, and innovation to build a better future for Bangladesh and beyond.</p>
+                <a href="#" class="btn">Explore Campus <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="vision-section">
+            <h2>Our Vision</h2>
+            <p>To be the center of excellence for quality education, research and innovation, fostering intellectual growth and contributing to societal development through cutting-edge technological advancements and sustainable practices.</p>
+        </section>
+
+        <section class="about-section">
+            <div class="about-content">
+                <h3>About DUET</h3>
+                <p>Dhaka University of Engineering & Technology, Gazipur is a premier institution dedicated to excellence in engineering education and research. We provide a transformative educational experience that prepares students for leadership in their professional careers.</p>
+                <p>Our campus offers state-of-the-art facilities, world-class faculty, and a vibrant learning environment that encourages innovation and critical thinking.</p>
+                <a href="#" class="btn">About DATE <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="about-image">
+                <div>DUET Campus</div>
+            </div>
+        </section>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h4>Quality Education</h4>
+                <p>We offer comprehensive engineering programs designed to meet global standards and industry needs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h4>Research Excellence</h4>
+                <p>Our research initiatives address real-world challenges and contribute to technological advancement.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Vibrant Community</h4>
+                <p>Join a diverse community of students, faculty, and staff dedicated to making a positive impact.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Dhaka University of Engineering & Technology, Gazipur</p>
+                    <p>Gazipur-1700, Dhaka, Bangladesh</p>
+                    <p>Phone: +880 123 456 7890</p>
+                    <p>Email: info@duet.ac.bd</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About DUET</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">Admission Information</a></li>
+                        <li><a href="#">Research Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="#">Undergraduate Programs</a></li>
+                        <li><a href="#">Graduate Programs</a></li>
+                        <li><a href="#">Doctoral Programs</a></li>
+                        <li><a href="#">Continuing Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <p>Follow us on social media to stay updated with the latest news and events.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dhaka University of Engineering & Technology, Gazipur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            if (navMenu.classList.contains('active')) {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '80px';
+                navMenu.style.right = '20px';
+                navMenu.style.background = 'var(--primary-blue)';
+                navMenu.style.padding = '20px';
+                navMenu.style.borderRadius = '10px';
+                navMenu.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+                navMenu.style.zIndex = '100';
+            } else {
+                navMenu.style.display = 'none';
+            }
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dhaka University of Engiring Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
+    <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
+    <meta content="Themesdesign" name="author" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/duetfavicon.png">
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Pe-icon-7 icon -->
+    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
+    <!--Slider-->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.transitions.css" />
+    <!-- magnific pop-up -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <style>
+        /* Topbar - initially visible, disappears on scroll */
+        .topbar {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #e9ecef;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1040;
+            height: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Navbar - starts below topbar, moves to top on scroll */
+        .navbar-custom {
+            background-color: #ffffff !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 40px; /* Start below topbar */
+            width: 100%;
+            z-index: 1030;
+            transition: all 0.3s ease;
+        }
+        
+        /* Class to apply when scrolled */
+        .scrolled .topbar {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        
+        .scrolled .navbar-custom {
+            top: 0; /* Move to top when topbar disappears */
+        }
+        
+        /* Black text color for topbar and navbar */
+        .topbar-link a,
+        .topbar-social a,
+        .topbar-link i,
+        .topbar-social i {
+            color: #000000 !important;
+        }
+        
+        .navbar-custom .nav-link {
+            color: #000000 !important;
+            font-weight: 500;
+            
+        }
+        
+        .navbar-custom .nav-link:hover {
+            color: #000000 !important;
+        }
+        
+        .navbar-custom .dropdown-toggle::after {
+            color: #000000;
+        }
+        
+        /* Dropdown menu text colors */
+        .navbar-custom .dropdown-menu .dropdown-item {
+            color: #000000 !important;
+        }
+        
+        .navbar-custom .dropdown-menu .dropdown-item:hover {
+            color: #0d6efd !important;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar-custom .dropdown-menu .mega-menu-title {
+            color: #000000 !important;
+        }
+        
+        .form-control {
+            color: #000000 !important;
+            background-color: #f8f9fa !important;
+            border-color: #dee2e6 !important;
+        }
+        
+        .form-control::placeholder {
+            color: #6c757d !important;
+        }
+        
+        /* Add padding to body to account for fixed headers */
+        body {
+            padding-top: 120px; /* Initial padding (topbar + navbar) */
+            transition: padding-top 0.3s ease;
+        }
+        
+        body.scrolled {
+            padding-top: 80px; /* Reduced padding when topbar is hidden */
+        }
+        
+        /* Adjust floating button position */
+        #toggleLinksBtn {
+            top: 140px; /* Initial position */
+            transition: top 0.3s ease;
+            z-index: 1060;
+        }
+        
+        body.scrolled #toggleLinksBtn {
+            top: 100px; /* Move up when topbar disappears */
+        }
+        
+        /* Ensure dropdown menus appear above content */
+        .dropdown-menu {
+            z-index: 1050 !important;
+        }
+        
+        .mega-menu-content {
+            z-index: 1050 !important;
+        }
+    </style>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navbarCollapse">
+
+    <!-- TAGLINE HEADER START - Fixed at top, disappears on scroll -->
+    <div class="topbar">
+        <div class="container">
+            <div class="float-start">
+                <div class="phone-topbar">
+                    <ul class="list-inline topbar-link mb-0">
+                        <li><a href="services.html"><i class="mdi mdi-view-list">Services</i></a></li>
+                        <li><a href="admission.html"><i class="mdi mdi-clipboard-check-outline"> Admission</i></a></li>
+                        <li><a href="central-library.html"><i class="mdi mdi-book-open-page-variant"> Library</i></a></li>
+                        <li><a href="peoples.html"><i class="mdi mdi-account-group-outline"> People</i></a></li>
+                        <li><a href="https://alumni.duetbd.org/" target="_blank"><i class="mdi mdi-school-outline"> Alumni</i></a></li>
+                        <li><a href="event-list.html"><i class="mdi mdi-calendar-multiselect"> Events</i></a></li>
+                        <li><a href="citizen-charter.html"><i class="mdi mdi-file-document-outline"> Citizen Charter</i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="float-end">
+                <ul class="list-inline topbar-social pb-0 pt- mt-2 mb-0">
+                    <li class="list-inline-item ps-2"><a href="https://www.facebook.com/eduduet/" class=""><i class="mdi mdi-facebook"></i></a></li>
+                    <li class="list-inline-item ps-2"><a href="https://mail.google.com/a/duet.ac.bd" class=""><i class="mdi mdi-email"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <!--Navbar - Moves to top when scrolled -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="images/duet-logo.png" class="logo-light" alt="" height="60">
+                <img src="images/duet-logo.png" class="logo-dark" alt="" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="mySidenav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link smoothlink">HOME</a>
+                    </li>
+                    
+                    <!-- About DUET Mega Menu -->
+                    <li class="nav-item dropdown mega-menu">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT DUET <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu mega-menu-content">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <h6 class="mega-menu-title">University Info</h6>
+                                        <a class="dropdown-item" href="history.html">History</a>
+                                        <a class="dropdown-item" href="mission-vision.html">Mission & Vision</a>
+                                        <a class="dropdown-item" href="at-a-glance.html">At A Glance</a>
+                                        <a class="dropdown-item" href="duet-act.html">DUET Act</a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h6 class="mega-menu-title">Administration</h6>
+                                        <a class="dropdown-item" href="organogram.html">DUET Organogram</a>
+                                        <a class="dropdown-item" href="gallery.html">Gallery</a>
+                                        <a class="dropdown-item" href="vc-office.html">VC's Office</a>
+                                        <a class="dropdown-item" href="pro-vc-office.html">Pro-VC's Office</a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h6 class="mega-menu-title">Campus</h6>
+                                        <a class="dropdown-item" href="campus-map.html">Campus Map</a>
+                                        <a class="dropdown-item" href="facilities.html">Facilities</a>
+                                        <a class="dropdown-item" href="hostels.html">Hostels</a>
+                                        <a class="dropdown-item" href="transport.html">Transport</a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h6 class="mega-menu-title">Governance</h6>
+                                        <a class="dropdown-item" href="syndicate.html">Syndicate</a>
+                                        <a class="dropdown-item" href="academic-council.html">Academic Council</a>
+                                        <a class="dropdown-item" href="finance-committee.html">Finance Committee</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <!-- Notices Mega Menu -->
+                <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        NOTICES <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu mega-menu-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <h6 class="mega-menu-title">Academic Notices</h6>
+                                    <a class="dropdown-item" href="academic-notices.html">All Academic Notices</a>
+                                    <a class="dropdown-item" href="class-routine.html">Class Routine</a>
+                                    <a class="dropdown-item" href="exam-notices.html">Exam Notices</a>
+                                    <a class="dropdown-item" href="result.html">Results</a>
+                                </div>
+                                <div class="col-lg-4">
+                                    <h6 class="mega-menu-title">Administrative</h6>
+                                    <a class="dropdown-item" href="administrative-notices.html">Administrative Notices</a>
+                                    <a class="dropdown-item" href="tender-notices.html">Tender Notices</a>
+                                    <a class="dropdown-item" href="recruitment.html">Recruitment</a>
+                                    <a class="dropdown-item" href="circulars.html">Circulars</a>
+                                </div>
+                                <div class="col-lg-4">
+                                    <h6 class="mega-menu-title">Other Notices</h6>
+                                    <a class="dropdown-item" href="events-notices.html">Events & Seminars</a>
+                                    <a class="dropdown-item" href="scholarship-notices.html">Scholarships</a>
+                                    <a class="dropdown-item" href="archive.html">Notice Archive</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Academic Mega Menu -->
+                <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ACADEMIC <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu mega-menu-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <h6 class="mega-menu-title">Departments</h6>
+                                    <a class="dropdown-item" href="dept-cse.html">Computer Science & Engineering</a>
+                                    <a class="dropdown-item" href="dept-eee.html">Electrical & Electronic Engineering</a>
+                                    <a class="dropdown-item" href="dept-ce.html">Civil Engineering</a>
+                                    <a class="dropdown-item" href="dept-me.html">Mechanical Engineering</a>
+                                    <a class="dropdown-item" href="dept-ipe.html">Industrial & Production Engineering</a>
+                                    <a class="dropdown-item" href="dept-ete.html">Electronics & Telecommunication Engineering</a>
+                                </div>
+                                <div class="col-lg-4">
+                                    <h6 class="mega-menu-title">Programs</h6>
+                                    <a class="dropdown-item" href="undergraduate.html">Undergraduate Programs</a>
+                                    <a class="dropdown-item" href="postgraduate.html">Postgraduate Programs</a>
+                                    <a class="dropdown-item" href="phd-programs.html">PhD Programs</a>
+                                    <a class="dropdown-item" href="academic-calendar.html">Academic Calendar</a>
+                                    <a class="dropdown-item" href="syllabus.html">Syllabus</a>
+                                </div>
+                                <div class="col-lg-4">
+                                    <h6 class="mega-menu-title">Academic Resources</h6>
+                                    <a class="dropdown-item" href="central-library.html">Central Library</a>
+                                    <a class="dropdown-item" href="e-learning.html">E-Learning</a>
+                                    <a class="dropdown-item" href="research.html">Research</a>
+                                    <a class="dropdown-item" href="journals.html">Journals</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Office Mega Menu -->
+                <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        OFFICE & Admission <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu mega-menu-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <h6 class="mega-menu-title">Administrative Offices</h6>
+                                    <a class="dropdown-item" href="registrar-office.html">Registrar's Office</a>
+                                    <a class="dropdown-item" href="controller-office.html">Controller of Examinations</a>
+                                    <a class="dropdown-item" href="finance-office.html">Finance Office</a>
+                                    <a class="dropdown-item" href="admin-office.html">Administration Office</a>
+                                </div>
+                                <div class="col-lg-4">
+                                    <h6 class="mega-menu-title">Academic Offices</h6>
+                                    <a class="dropdown-item" href="academic-office.html">Academic Office</a>
+                                    <a class="dropdown-item" href="dean-office.html">Dean's Office</a>
+                                    <a class="dropdown-item" href="department-office.html">Department Offices</a>
+                                    <a class="dropdown-item" href="admission-office.html">Admission Office</a>
+                                </div>
+                                <div class="col-lg-4">
+                                    <h6 class="mega-menu-title">Support Services</h6>
+                                    <a class="dropdown-item" href="computer-center.html">Computer Center</a>
+                                    <a class="dropdown-item" href="medical-center.html">Medical Center</a>
+                                    <a class="dropdown-item" href="career-office.html">Career Guidance</a>
+                                    <a class="dropdown-item" href="student-affairs.html">Student Affairs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- PUBLICATION Mega Menu -->
+                <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        PUBLICATION <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu mega-menu-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h6 class="mega-menu-title">Quick Links</h6>
+                                    <a class="dropdown-item" href="download-forms.html">Downloadable Forms</a>
+                                    <a class="dropdown-item" href="phone-directory.html">Phone Directory</a>
+                                    <a class="dropdown-item" href="citizen-charter.html">Citizen Charter</a>
+                                    <a class="dropdown-item" href="faq.html">FAQ</a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h6 class="mega-menu-title">Student Corner</h6>
+                                    <a class="dropdown-item" href="student-portal.html">Student Portal</a>
+                                    <a class="dropdown-item" href="eregn-ug.html">eRegistration (UG)</a>
+                                    <a class="dropdown-item" href="eregn-pg.html">eRegistration (PG)</a>
+                                    <a class="dropdown-item" href="student-clubs.html">Student Clubs</a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h6 class="mega-menu-title">Faculty Corner</h6>
+                                    <a class="dropdown-item" href="faculty-portal.html">Faculty Portal</a>
+                                    <a class="dropdown-item" href="research-portal.html">Research Portal</a>
+                                    <a class="dropdown-item" href="publications.html">Publications</a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h6 class="mega-menu-title">External Links</h6>
+                                    <a class="dropdown-item" href="https://ugc.gov.bd" target="_blank">UGC Bangladesh</a>
+                                    <a class="dropdown-item" href="https://moedu.gov.bd" target="_blank">Ministry of Education</a>
+                                    <a class="dropdown-item" href="https://techedu.gov.bd" target="_blank">Directorate of Technical Education</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- APA -->
+                 <li class="nav-item">
+                    <a href="index.html" class="nav-link smoothlink">APA</a>
+                </li>
+                <!-- Online Servvice Mega Menu -->
+                <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ONLINE SERVICE <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu mega-menu-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h6 class="mega-menu-title">Quick Links</h6>
+                                    <a class="dropdown-item" href="download-forms.html">Downloadable Forms</a>
+                                    <a class="dropdown-item" href="phone-directory.html">Phone Directory</a>
+                                    <a class="dropdown-item" href="citizen-charter.html">Citizen Charter</a>
+                                    <a class="dropdown-item" href="faq.html">FAQ</a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h6 class="mega-menu-title">Student Corner</h6>
+                                    <a class="dropdown-item" href="student-portal.html">Student Portal</a>
+                                    <a class="dropdown-item" href="eregn-ug.html">eRegistration (UG)</a>
+                                    <a class="dropdown-item" href="eregn-pg.html">eRegistration (PG)</a>
+                                    <a class="dropdown-item" href="student-clubs.html">Student Clubs</a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h6 class="mega-menu-title">Faculty Corner</h6>
+                                    <a class="dropdown-item" href="faculty-portal.html">Faculty Portal</a>
+                                    <a class="dropdown-item" href="research-portal.html">Research Portal</a>
+                                    <a class="dropdown-item" href="publications.html">Publications</a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h6 class="mega-menu-title">External Links</h6>
+                                    <a class="dropdown-item" href="https://ugc.gov.bd" target="_blank">UGC Bangladesh</a>
+                                    <a class="dropdown-item" href="https://moedu.gov.bd" target="_blank">Ministry of Education</a>
+                                    <a class="dropdown-item" href="https://techedu.gov.bd" target="_blank">Directorate of Technical Education</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <li>
+                <i class="mdi mdi-tab-search"></i>
+            </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Floating Link Icon Button -->
+<button id="toggleLinksBtn" 
+        class="btn btn-success square shadow d-flex align-items-center justify-content-center position-fixed" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#importantLinks" 
+        aria-expanded="false" 
+        aria-controls="importantLinks"
+        style="top: 120px; left: 0px; z-index: 1060; width:50px; height:40px;">
+    <i class="mdi mdi-link-variant" style="font-size:20px; line-height:1;"></i>
+</button>
+
+<!-- Collapsible Important Links Box -->
+<div class="collapse" id="importantLinks">
+    <div class="card card-body shadow border-0 position-fixed" 
+         style="top: 110px; left: 50px; width:280px; z-index:1050;">
+        <h6 class="fw-bold mb-3 text-success">Important Links</h6>
+        <ul class="list-unstyled mb-0">
+            <li><a href="#">Message from the Vice-Chancellor</a></li>
+            <li><a href="#">Office of the Vice-Chancellor</a></li>
+            <li><a href="#">Office of the Pro-Vice-Chancellor</a></li>
+            <li><a href="#">At a Glance</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Downloadable Forms</a></li>
+            <li><a href="#">APA & National Integrity Strategy</a></li>
+            <li><a href="#">eRegistration (Undergraduate)</a></li>
+            <li><a href="#">eRegistration (Postgraduate)</a></li>
+            <li><a href="#">D-Nothi</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- End of TOggle -->
+    <!-- END HOME -->
+
+    <!-- Your content starts here -->
+
+    
+        <!-- START FOOTER -->
+ <footer class="footer-main">
+        <div class="footer-ribbon">
+        <div class="footer-ribbon-text">Get in Touch</div>
+    </div>
+
+    <div class="container footer-content-padding p-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 mb-4">
+                <h4 class="footer-link-title">Academic & Admission</h4>
+                <ul class="footer-link-list">
+                    <li><a href="https://www.duet.ac.bd/academic-calender">Academic Calendar</a></li>
+                    <li><a href="https://www.duet.ac.bd/#">Academic Collaboration</a></li>
+                    <li><a href="https://www.duet.ac.bd/admission/undergraduate/at-a-glance">Admission for Undergraduate</a></li>
+                    <li><a href="https://www.duet.ac.bd/admission/postgraduate/at-a-glance">Admission for Postgraduate</a></li>
+                    <li><a href="https://www.duet.ac.bd/dean-list">Dean's List</a></li>
+                    <li><a href="https://www.duet.ac.bd/departments">Department</a></li>
+                    <li><a href="https://journal.duetbd.org/">DUET Journal Access</a></li>
+                    <li><a href="https://elp.duetbd.org/">e-Learning Platform</a></li>
+                    <li><a href="https://ugr.duetbd.org/">eRegistration (Undergraduate)</a></li>
+                    <li><a href="https://pgr.duetbd.org/">eRegistration (Postgraduate)</a></li>
+                    <li><a href="https://www.duet.ac.bd/institutes">Institute</a></li>
+                    <li><a href="https://www.duet.ac.bd/#">Publication</a></li>
+                    <li><a href="https://www.duet.ac.bd/#">Scholarship/Funding</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-4 col-md-4 mb-4">
+                <h4 class="footer-link-title">Quick Links</h4>
+                <ul class="footer-link-list">
+                    <li><a href="https://www.duet.ac.bd/account-manual">Account Manual</a></li>
+                    <li><a href="https://www.duet.ac.bd/annual-report">Annual Report</a></li>
+                    <li><a href="https://www.duet.ac.bd/apa-and-nis-implementation">APA & National Integrity Strategy Implementation</a></li>
+                    <li><a href="https://www.duet.ac.bd/calendar-2025">Calendar 2025</a></li>
+                    <li><a href="https://www.duet.ac.bd/#">Convocation</a></li>
+                    <li><a href="https://www.duet.ac.bd/clubs-communities">DUET Clubs & Communities</a></li>
+                    <li><a href="https://www.duet.ac.bd/all-downloadable-form">Downloadable Forms</a></li>
+                    <li><a href="https://alumni.duetbd.org/">DUET Alumni Association</a></li>
+                    <li><a href="https://www.duet.ac.bd/#">DUET Directory App</a></li>
+                    <li><a href="https://www.duet.ac.bd/news-list">Latest News</a></li>
+                    <li><a href="https://www.duet.ac.bd/holiday-list">Holiday List</a></li>
+                    <li><a href="https://career.duetbd.org/">Online Job Application Submission Portal</a></li>
+                    <li><a href="https://www.duet.ac.bd/phonebook">Phonebook</a></li>
+                    <li><a href="https://www.duet.ac.bd/services">Services</a></li>
+                    <li><a href="https://www.duet.ac.bd/about/duet-act">University Act-2003</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-4 col-md-4 mb-4">
+                <div class="map-container mb-3">
+                    <div style="background-color: #333; height: 200px; display: flex; align-items: center; justify-content: center; color: white; border: 1px solid #555;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14577.498736031994!2d90.418188!3d24.017849!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755da4eced0c537%3A0x8d54b38a823b5212!2sDhaka%20University%20of%20Engineering%20and%20Technology%20(DUET)!5e0!3m2!1sen!2sus!4v1760331974486!5m2!1sen!2sus" width="700" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/mwMhD5bMa9ewHDe28" class="d-block text-white text-end mt-1" style="font-size: 0.8rem;">View larger map</a>
+                </div>
+                
+                <div class="contact-info">
+                    <p>
+                        <i class="mdi mdi-map-marker" style="color: var(--duet-link-green);"></i> 
+                        <strong>Mailing Address:</strong> Registrar, Dhaka University of Engineering and Technology, Gazipur-1707, Bangladesh
+                    </p>
+                    <p>
+                        <i class="mdi mdi-phone" style="color: var(--duet-link-green);"></i> 
+                        <strong>Phone:</strong> +88-02-49274003
+                    </p>
+                    <p>
+                        <i class="mdi mdi-phone-in-talk" style="color: var(--duet-link-green);"></i> 
+                        <strong>IP (Local):</strong> 202.5.88 @ [Direct] - 320005, 320005
+                    </p>
+                    <p>
+                        <i class="mdi mdi-fax" style="color: var(--duet-link-green);"></i> 
+                        <strong>Fax:</strong> +88-02-49274001-02
+                    </p>
+                    <p>
+                        <i class="mdi mdi-contact-mail" style="color: var(--duet-link-green);"></i> 
+                        <strong>Email:</strong> reg_duet@duet.ac.bd
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="row align-items-center">
+    
+    <div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="facebook-embed-box">
+        <div class="ratio ratio-16x9" style="--bs-aspect-ratio: 30%;"> 
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Feduduet%2F&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="100%" height="100%" 
+                    style="border:none; overflow:hidden;" 
+                    scrolling="no" frameborder="0" allowfullscreen="true" 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
+        </div>
+    </div>
+</div>
+    
+    <div class="col-lg-6 col-md-4 col-sm-0 d-none d-md-block">
+        <div>
+            <img src="images/fbanner.jpg" alt="Help Desk" style="width: 95%; height: 50%; vertical-align: middle;">
+        </div>
+    </div>
+    
+    <div class="col-lg-3 col-md-4 col-sm-6">
+        <button 
+    type="button" 
+    class="btn btn-outline-secondary" 
+    style="border-color: #009F51; color: #009F51; white-space: nowrap;" 
+    data-bs-toggle="modal" 
+    data-bs-target="#contactModal"
+>
+    Message to Web Admin 
+    <i class="mdi mdi-arrow-right"></i>
+</button>
+    </div>
+</div>
+    </div>
+    </div>
+    <!-- Modal -->
+     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <div class="modal-header" style="background-color: #f8f9fa;">
+                <h5 class="modal-title" id="contactModalLabel" style="color: black;">Contact Web Admin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label" style="color: black;">Your Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label" style="color: black;">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label" style="color: black;">Your Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn" style="background-color: #009F51; color: white;">Send Message</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal END -->
+    <div class="copyright">
+        <b>DUET &copy; Copyright 2025</b> | All Rights Reserved | Powered by <b>Computer Center</b> | Last Update: <b>Oct 13, 2025</b>
+    </div>
+
+</footer>
+    <!-- END FOOTER -->
+
+    <!-- javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+    <!-- Portfolio -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- contact init -->
+    <script src="js/contact.init.js"></script>
+    <!-- counter init -->
+    <script src="js/counter.init.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="https://unicons.iconscout.com/release/v2.0.1/script/monochrome/bundle.js"></script>
+    <script src="js/app.js"></script>
+
+<!-- Floating Toggle Js Script -->
+ <script>
+document.addEventListener('click', function (event) {
+    const collapseElement = document.getElementById('importantLinks');
+    const toggleButton = document.getElementById('toggleLinksBtn');
+    const bsCollapse = bootstrap.Collapse.getInstance(collapseElement);
+
+    // If the collapse is open and user clicks outside
+    if (
+        collapseElement.classList.contains('show') &&
+        !collapseElement.contains(event.target) &&
+        !toggleButton.contains(event.target)
+    ) {
+        bsCollapse.hide();
+    }
+});
+</script>
+<!-- Floating Toggle JS Script END -->
+
+    <!-- JavaScript to handle scroll behavior -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.body;
+            let lastScrollTop = 0;
+            
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 100) { // Adjust this value as needed
+                    body.classList.add('scrolled');
+                } else {
+                    body.classList.remove('scrolled');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+
+    <!-- Rest of your content -->
+</body>
+</html>
