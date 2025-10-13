@@ -743,7 +743,7 @@ a {
 }
 
 .text-light {
-  color: #f6f7fb !important;
+  color: #ffffff !important;
 }
 
 .icon-dual-light {
@@ -972,6 +972,124 @@ a {
   margin-left: 10px;
 }
 
+/* Footer Style */
+        /* Define the primary dark green color */
+        :root {
+            --duet-dark-green: #212529; /* Using a darker shade for the main footer body */
+            --duet-light-green: #377d22; /* For the "Get in Touch" button/section */
+            --duet-text-gray: #c9c9c9; /* Light gray text for the main content */
+            --duet-link-green: #90ee90; /* Light green for links */
+        }
+
+        .footer-main {
+            background-color: var(--duet-dark-green);
+            color: var(--duet-text-gray);
+            padding-top: 2rem;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .footer-bottom {
+            background-color: #1a1a1a; /* Even darker shade for the bottom bar */
+            color: var(--duet-text-gray);
+            padding: 0.5rem 0;
+            font-size: 0.8rem;
+        }
+
+        .footer-link-title {
+            color: white; /* Title headings are white/brighter */
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .footer-link-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-link-list li {
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-link-list li a {
+            color: var(--duet-text-gray);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .footer-link-list li a:hover {
+            color: var(--duet-link-green);
+        }
+
+        .footer-link-list li::before {
+            content: '›'; /* Custom bullet point (you can use an icon for better look) */
+            color: var(--duet-link-green);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .get-in-touch {
+            background-color: var(--duet-light-green);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: -2rem; /* Pull it up slightly to overlap the top */
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .contact-info strong {
+            color: white;
+            font-weight: normal;
+        }
+        
+        .map-container {
+            border: 1px solid #444; /* Optional: border around the map */
+        }
+        
+        .web-admin-btn {
+            background-color: #377d22; /* Specific green for the admin button */
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+
+        .web-admin-btn:hover {
+            background-color: #4a9e34;
+            color: white;
+        }
+
+        .up-arrow {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--duet-light-green);
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+/*  */
 /*---NAVBAR LIGHT--*/
 .navbar-light .navbar-nav li a {
   color: rgba(255, 255, 255, 0.7) !important;
@@ -1005,6 +1123,75 @@ a {
 
 
 /* Toggle End */
+/* Typewriter Start for h2 */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(153, 106, 17); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 4s steps(200, end),
+    blink-caret .80s step-end infinite;
+    font-size: x-large;
+    
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+/* Typewriter stop for h2 */
+
+/* fade up effect */
+.fade-up-element {
+  opacity: 50; /* Start invisible */
+  transform: translateY(20px); /* Start slightly below its final position */
+  animation: fadeUp 5s ease-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at its original position */
+  }
+}
+/* Fade up effect end */
+
+/* fade left */
+.fade-right-element {
+  /* Initial state (hidden and shifted left) */
+  opacity: 0;
+  transform: translateX(+30px); /* Adjust the value for desired starting position */
+  animation: fadeInLeft 8s ease-out forwards; /* Animation name, duration, timing, and fill-mode */
+  font-weight: 800;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(+30px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* fade left effect end */
+
 /*---NAVBAR STICKY--*/
 .nav-sticky.navbar-custom {
   margin-top: 0px;
