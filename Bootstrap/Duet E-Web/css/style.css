@@ -1381,12 +1381,12 @@ bar {
   color: #4353ff;
 }
 .blog-box .blog-lable {
-  top: 30px;
+  top: 20px;
   background: #4353ff;
   color: #ffffff;
   font-size: 13px;
   position: absolute;
-  top: 30px;
+  top: 20px;
   right: 0px;
   padding: 6px 14px;
   border-radius: 20px 0px 0px 20px;
@@ -2177,7 +2177,6 @@ textarea.form-control {
         display: inline-block !important;
     }
 }
-
 /* ====================================
    SMOOTH TRANSITIONS
 ==================================== */
@@ -2196,7 +2195,353 @@ textarea.form-control {
 .navbar-nav .dropdown-toggle[aria-expanded="true"]::after {
     transform: rotate(180deg);
 }
-/*  */
-
-/*  */
 /* Main Nav END */
+
+/* Home About Images*/
+.main-layout-area {
+    /* Set a max width/height to make it look like a floating canvas */
+    max-width: 1200px;
+    width: 100%;
+    /* Aspect ratio close to what is visible, adjust as needed */
+    aspect-ratio: 16 / 10;
+}
+
+/* Ensure images fill their columns nicely */
+.image-1, .image-3 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Specific styling for the top-left section containing the overlap */
+.image-group-1 {
+    /* Height constraint if needed, but flexbox/grid handles it well */
+    /* Ensure this group is relative for absolute positioning of its child */
+    position: relative;
+    /* On large screens, align this group to the top */
+    align-self: start; 
+}
+
+/* Adjust the main image of the group to define the overall space */
+.image-1 {
+    /* You might need to adjust the height of the first image to achieve the vertical balance */
+    max-height: 1000px; 
+    object-fit: cover;
+}
+
+/* The small image that overlaps/floats */
+.image-2 {
+    max-height: 500px;
+    position: absolute;
+    bottom: -110px;  /* Move it down from the bottom of image-1 */
+    left: -10%;    /* Move it left */
+    width: 80%;    /* Adjust size as needed */
+    z-index: 85;   /* Ensure it's on top */
+    
+}
+
+
+/* Styling for the large right-side image */
+.image-group-2 {
+    /* Push image 3 down/align it to the bottom-right visually */
+    align-self: end;
+}
+.image-3 {
+    /* Adjust its size or position to fill the lower-right area */
+    max-height: 500px;
+    position: absolute;
+    bottom: -110px;  /* Move it down from the bottom of image-1 */
+    left: -10%;    /* Move it left */
+    width: 80%;    /* Adjust size as needed */
+    z-index: 85;   /* Ensure it's on top */
+}
+
+/* Media Query for Mobile/Smaller Screens */
+@media (max-width: 991.98px) {
+    /* Adjust the overlapping image position for smaller screens to keep it visible */
+    .image-2 {
+        bottom: 5%; /* Keep it within the bounds more */
+        left: 5%;
+        width: 40%;
+    }
+    .main-layout-area {
+        /* Allow content to flow vertically on mobile */
+        aspect-ratio: auto; 
+    }
+}
+/* END Home About Images */
+
+
+/* Achivement BOX */
+.page-container {
+    /* Simulating the light grey/off-white background */
+    background-color: #f7f9fc;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%; /* Ensure it spans the full width of the parent */
+}
+
+.achievement-card {
+    /* Setting a fixed size for demonstration, use w-75 or w-100 for responsive width */
+    width: 90%;
+    max-width: 550px;
+    /* White background is standard for card, added rounded-lg for smoother look */
+    border-radius: 0.75rem; 
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08); /* Light shadow for "lift" */
+}
+.card-header {
+    background-color: white; /* Ensure header background is white */
+    border-bottom: 1px solid #e9ecef; /* Subtle separator line */
+    font-weight: 600; /* Semi-bold text */
+    padding: 1rem 1.25rem;
+}
+/* Achivement BOX END*/
+
+/* Faculty Box Home */
+
+
+.faculty-title {
+    font-size: 2rem; /* Adjust as needed */
+    font-weight: 600;
+    color: #333; /* Dark text color */
+    margin-bottom: 3px;
+}
+
+.faculty-title::after {
+    content: '';
+    display: block;
+    width: 60px; /* Width of the green line */
+    height: 3px;
+    background-color: #009F51; /* Green color from the image */
+    margin: 0px auto 0; /* Center the line */
+    border-radius: 2px;
+}
+
+.faculty-subtitle {
+    font-size: 1rem;
+    color: #6c757d; /* Muted text color */
+    margin-top: 10px;
+}
+
+/* --- Faculty Box Styling (The Cards) --- */
+.faculty-box {
+    /* Base Box Style */
+    background-color: #fff;
+    border: 1px solid #e8e8e8; /* Light gray border */
+    border-radius: 5px; /* Slight rounding of corners */
+    height: 100%; /* Ensures all boxes are the same height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+.faculty-box-title {
+    /* Title inside the box */
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* --- List Styling --- */
+.faculty-list {
+    padding-left: 0; /* Remove default padding from list-unstyled */
+    margin-bottom: 0;
+}
+
+.faculty-list li {
+    list-style: none; /* Ensure no bullets */
+    margin-bottom: 0.20rem; /* Space between list items */
+    font-size: 0.70rem;
+    color: #495057;
+    font-weight: bold;
+}
+
+.faculty-icon {
+    color: #009F51; /* The green checkmark color */
+    font-size: 1.1rem;
+    margin-right: 8px; /* Space between icon and text */
+}
+/* Faculty BOx hoem End */
+/* APA */
+/* General Section Styling for the Title */
+.section-header-container {
+    padding-top: 20px;
+}
+
+.section-main-title {
+    font-size: 2.2rem; /* Adjusted font size for a slightly smaller title */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.section-main-title::after {
+    content: '';
+    display: block;
+    width: 60px; /* Width of the green line */
+    height: 3px;
+    background-color: #009F51; /* Green color */
+    margin: 8px auto 0; /* Center the line */
+    border-radius: 2px;
+}
+
+
+/* --- Custom Card Box Styling --- */
+/* Base style for all cards */
+.custom-card-box {
+    background-color: #fff;
+    border: 1px solid #e8e8e8; /* Light gray border for standard cards */
+    border-radius: 5px;
+    padding: 30px 20px; /* Internal spacing */
+    height: 100%; /* Ensures all cards in a row are same height */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03); /* Subtle initial shadow */
+}
+
+/* Specific style for the card with the green border */
+.custom-card-box.bordered-card {
+    border: 1px solid #009F51; /* Green border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Slightly more prominent shadow for the highlighted card */
+}
+
+/* Optional: Hover effect for all cards */
+.custom-card-box:hover {
+    border-color: #009F51; /* Highlight border on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Lift shadow on hover */
+}
+.custom-card-box.bordered-card:hover { /* Override hover for the green bordered card to keep green */
+    border-color: #009F51;
+}
+
+
+/* --- Icon/Image Styling --- */
+.icon-header {
+    text-align: center;
+    margin-bottom: 20px;
+    height: 60px; /* Control height for consistent title spacing */
+}
+
+.card-icon {
+    width: 60px; /* Adjust size of your icon image */
+    height: 60px;
+    object-fit: contain; /* Ensures the image scales correctly */
+}
+
+/* --- Card Title Styling --- */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8; /* Separator line below the title */
+}
+
+/* --- List Styling --- */
+.card-list {
+    padding-left: 0;
+}
+
+.card-list li {
+    list-style: none; /* Remove default bullets */
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    position: relative; /* Needed for positioning the custom bullet */
+    padding-left: 20px; /* Space for the custom bullet */
+}
+
+/* Custom Green Checkmark Bullet */
+.card-list li::before {
+    content: "\2713"; /* Unicode for a checkmark (✓) */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white; /* White checkmark */
+    background-color: #009F51; /* Green circle background */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    margin-right: 8px;
+}
+/* APA END */
+
+/* Blogs */
+.blog-s {
+    background-color: #fff;
+    border: 1px solid #e8e8e8; /* Light gray border for standard cards */
+    border-radius: 5px;
+    padding: 20px 20px; /* Internal spacing */
+    margin-top: 20px;
+    height: 100%; /* Ensures all cards in a row are same height */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03); /* Subtle initial shadow */
+}
+/* Blogs END */
+
+/* Events */
+.events-container {
+    width: 100%;
+    background-color: #f5f7f7;
+    border: #ff1504;
+    border-collapse: collapse;
+    padding: 20px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+}
+
+.event-row {
+    display: flex;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.event-col {
+    padding: 0 10px;
+}
+
+.date-col {
+    width: 120px;
+    font-weight: 700;
+    color: #009F51;
+    font-size: 14px;
+}
+
+.year-col {
+    width: 120px;
+    color: #009F51;
+    font-size: 14px;
+}
+
+.content-col {
+    flex: 1;
+    color: #212529;
+    font-size: 14px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+    .event-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .date-col,
+    .year-col {
+        width: 100%;
+        font-size: 13px;
+    }
+    
+    .content-col {
+        font-size: 13px;
+    }
+}

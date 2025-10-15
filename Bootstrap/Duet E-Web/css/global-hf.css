@@ -1,0 +1,106 @@
+.topbar {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #e9ecef;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1040;
+            height: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Navbar - starts below topbar, moves to top on scroll */
+        .navbar-custom {
+            background-color: #ffffff !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 40px; /* Start below topbar */
+            width: 100%;
+            z-index: 1030;
+            transition: all 0.3s ease;
+        }
+        
+        /* Class to apply when scrolled */
+        .scrolled .topbar {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        
+        .scrolled .navbar-custom {
+            top: 0; /* Move to top when topbar disappears */
+        }
+        
+        /* Black text color for topbar and navbar */
+        .topbar-link a,
+        .topbar-social a,
+        .topbar-link i,
+        .topbar-social i {
+            color: #000000 !important;
+        }
+        
+        .navbar-custom .nav-link {
+            color: #000000 !important;
+            font-weight: 500;
+            
+        }
+        
+        .navbar-custom .nav-link:hover {
+            color: #000000 !important;
+        }
+        
+        .navbar-custom .dropdown-toggle::after {
+            color: #000000;
+        }
+        
+        /* Dropdown menu text colors */
+        .navbar-custom .dropdown-menu .dropdown-item {
+            color: #000000 !important;
+        }
+        
+        .navbar-custom .dropdown-menu .dropdown-item:hover {
+            color: #0d6efd !important;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar-custom .dropdown-menu .mega-menu-title {
+            color: #000000 !important;
+        }
+        
+        .form-control {
+            color: #000000 !important;
+            background-color: #f8f9fa !important;
+            border-color: #dee2e6 !important;
+        }
+        
+        .form-control::placeholder {
+            color: #6c757d !important;
+        }
+        
+        /* Add padding to body to account for fixed headers */
+        body {
+            padding-top: 120px; /* Initial padding (topbar + navbar) */
+            transition: padding-top 0.3s ease;
+        }
+        
+        body.scrolled {
+            padding-top: 80px; /* Reduced padding when topbar is hidden */
+        }
+        
+        /* Adjust floating button position */
+        #toggleLinksBtn {
+            top: 140px; /* Initial position */
+            transition: top 0.3s ease;
+            z-index: 1060;
+        }
+        
+        body.scrolled #toggleLinksBtn {
+            top: 100px; /* Move up when topbar disappears */
+        }
+        
+        /* Ensure dropdown menus appear above content */
+        .dropdown-menu {
+            z-index: 1050 !important;
+        }
+        
+        .mega-menu-content {
+            z-index: 1050 !important;
