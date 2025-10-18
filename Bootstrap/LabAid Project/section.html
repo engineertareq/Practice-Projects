@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Service Landing Page</title>
+    <link rel="stylesheet" href="assets/css/labaid.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="top-nav">
+            <ul>
+                <li><a href="#"><span class="icon">📅</span> Book Appointment</a></li>
+                <li><a href="#"><span class="icon">🧑‍⚕️</span> Find A Doctor</a></li>
+                <li><a href="#"><span class="icon">➕</span> Online Report</a></li>
+                <li><a href="#"><span class="icon">💉</span> Packages and Vaccines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="background-carousel">
+            <div class="carousel-slide active" data-index="0"></div>
+            <div class="carousel-slide" data-index="1"></div>
+            <div class="carousel-slide" data-index="2"></div>
+        </div>
+
+        <button class="slider-arrow left" onclick="changeSlide(-1)">❮</button>
+        <button class="slider-arrow right" onclick="changeSlide(1)">❯</button>
+
+        <div class="search-module-wrapper">
+            <div class="search-form-container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search For Doctor/Department/Any Thing...">
+                    <select>
+                        <option disabled selected>--- Select Option ---</option>
+                        <option>Doctor</option>
+                        <option>Department</option>
+                        <option>Hospitals</option>
+                        <option>Diagonastics</option>
+                        <option>Packages</option>
+                        <option>News</option>
+                    </select>
+                    <button type="submit" class="search-button">
+                        🔍
+                    </button>
+                </form>
+            </div>
+
+            <div class="service-categories">
+                <a href="#" class="category-link">
+                    <span class="icon">🏥</span>
+                    <h4>Hospital</h4>
+                </a>
+                <a href="#" class="category-link">
+                    <span class="icon">🔬</span>
+                    <h4>Diagnostic</h4>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlideIndex = 0;
+        const totalSlides = slides.length;
+        const autoSlideInterval = 5000; // Change image every 5 seconds
+
+        /**
+         * Shows the specific slide index and updates the 'active' class.
+         * @param {number} index - The index of the slide to display.
+         */
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Calculate the new index, ensuring it wraps around
+            currentSlideIndex = (index + totalSlides) % totalSlides;
+            
+            // Show the new active slide
+            slides[currentSlideIndex].classList.add('active');
+        }
+
+        /**
+         * Changes the slide by a relative amount (1 for next, -1 for previous).
+         * @param {number} n - The change amount.
+         */
+        function changeSlide(n) {
+            // Stop the auto-slide timer when manually changing
+            resetTimer(); 
+            showSlide(currentSlideIndex + n);
+        }
+
+        /**
+         * Automatically advances the carousel to the next slide.
+         */
+        function autoSlide() {
+            showSlide(currentSlideIndex + 1);
+        }
+
+        let slideTimer = setInterval(autoSlide, autoSlideInterval);
+
+        /**
+         * Resets the automatic slide timer.
+         */
+        function resetTimer() {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(autoSlide, autoSlideInterval);
+        }
+
+        // Initialize the carousel to show the first slide
+        showSlide(currentSlideIndex);
+
+    </script>
+
+</body>
+</html>

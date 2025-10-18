@@ -1,0 +1,96 @@
+/* Custom CSS to match the provided image */
+        body {
+            font-family: Arial, sans-serif; /* Fallback font */
+        }
+        .notice-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Tabs Styling */
+        .nav-tabs {
+            border-bottom: 2px solid #ccc;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .nav-tabs .nav-link {
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: #666; /* Light gray for inactive tabs */
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        .nav-tabs .nav-link.active {
+            color: #007bff; /* Blue for active tab text */
+            border-bottom: 2px solid #007bff; /* Blue underline */
+            background-color: transparent;
+        }
+
+        /* Notice Item Styling */
+        .notice-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .notice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .notice-date-box {
+            width: 70px; /* Fixed width for the date box */
+            text-align: center;
+            margin-right: 15px;
+            color: white;
+            border-radius: 4px;
+            flex-shrink: 0; /* Prevent it from shrinking */
+        }
+        .notice-date-box .month {
+            font-size: 12px;
+            font-weight: bolder;
+            background-color: #F7F7F7;
+            color: #28A745;
+            text-transform: uppercase;
+            line-height: 1.8;
+            font-weight: bold;
+        
+        }
+        .notice-date-box .year {
+            font-size: 14px;
+            font-weight: bolder;
+            line-height: 2;
+            background-color: #28A745;
+        }
+
+        .notice-content {
+            flex-grow: 1;
+        }
+        .notice-content a {
+            color: #333; /* Dark text for the notice title */
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 1.4;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .notice-content a:hover {
+            color: #007bff; /* Hover effect */
+        }
+
+        .notice-content .download-link {
+            color: rgb(19, 18, 18); /* Green for download link */
+            font-size: 13px;
+            text-decoration: none;
+        }
+        .notice-content .mdi {
+            color: rgb(255, 0, 0); /* Green for download link */
+            font-size: 13px;
+            text-decoration: none;
+        }
+        .notice-content .download-link svg {
+            vertical-align: middle;
+            margin-right: 3px;
+        }
