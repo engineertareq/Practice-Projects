@@ -24,7 +24,6 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/global-hf.css">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/notice.css">
 </head>
 
 
@@ -85,11 +84,11 @@
                     <div class="p-3">
                         <h6 class="mega-menu-title">Know More About Duet</h6>
                         <a class="dropdown-item" href="history.html">History</a>
-                        <a class="dropdown-item" href="vision.html">Vision & Mission</a>
+                        <a class="dropdown-item" href="mission-vision.html">Vision & Mission</a>
                         <a class="dropdown-item" href="at-a-glance.html">At A Glance</a>
                         <a class="dropdown-item" href="duet-act.html">DUET Act</a>
-                        <a class="dropdown-item" href="duet-organogram.html">DUET Organization</a>
-                        <a class="dropdown-item" href="gallery.html">DUET Gallery</a>
+                        <a class="dropdown-item" href="duet-organization.html">DUET Organization</a>
+                        <a class="dropdown-item" href="duet-gallery.html">DUET Gallery</a>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -141,22 +140,28 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <h6 class="mega-menu-title">Academic Information</h6>
-                                    <a class="dropdown-item" href="academic-calender.html">Academic Calender</a>
-                                    <a class="dropdown-item" href="admission.html">Admission</a>
-                                    <a class="dropdown-item" href="study-programs.html">Study Program</a>
-                                    <a class="dropdown-item" href="https://ugr.duetbd.org/" target="_blank">Course Registration</a>
+                                    <h6 class="mega-menu-title">Departments</h6>
+                                    <a class="dropdown-item" href="dept-cse.html">Computer Science & Engineering</a>
+                                    <a class="dropdown-item" href="dept-eee.html">Electrical & Electronic Engineering</a>
+                                    <a class="dropdown-item" href="dept-ce.html">Civil Engineering</a>
+                                    <a class="dropdown-item" href="dept-me.html">Mechanical Engineering</a>
+                                    <a class="dropdown-item" href="dept-ipe.html">Industrial & Production Engineering</a>
+                                    <a class="dropdown-item" href="dept-ete.html">Electronics & Telecommunication Engineering</a>
                                 </div>
                                 <div class="col-lg-4">
-                                    <h6 class="mega-menu-title">Faculty</h6>
-                                    <a class="dropdown-item" href="faculty-ce.html">Faculty of Civil Engineering (CE)</a>
-                                    <a class="dropdown-item" href="faculty-eee.html">Faculty of Electrical and Electronic Engineering (EEE)</a>
-                                    <a class="dropdown-item" href="faculty-me.html">Faculty of Mechanical Engineering (ME)</a>
-                                    <a class="dropdown-item" href="faculty-science.html">Faculty of Science (science)</a>
+                                    <h6 class="mega-menu-title">Programs</h6>
+                                    <a class="dropdown-item" href="undergraduate.html">Undergraduate Programs</a>
+                                    <a class="dropdown-item" href="postgraduate.html">Postgraduate Programs</a>
+                                    <a class="dropdown-item" href="phd-programs.html">PhD Programs</a>
+                                    <a class="dropdown-item" href="academic-calendar.html">Academic Calendar</a>
+                                    <a class="dropdown-item" href="syllabus.html">Syllabus</a>
                                 </div>
                                 <div class="col-lg-4">
-                                    <h6 class="mega-menu-title">Center</h6>
-                                    <a class="dropdown-item" href="https://www.duet.ac.bd/center/3csr" target="_blank">Center for Climate Change & Sustainability Research (3csr)</a>
+                                    <h6 class="mega-menu-title">Academic Resources</h6>
+                                    <a class="dropdown-item" href="central-library.html">Central Library</a>
+                                    <a class="dropdown-item" href="e-learning.html">E-Learning</a>
+                                    <a class="dropdown-item" href="research.html">Research</a>
+                                    <a class="dropdown-item" href="journals.html">Journals</a>
                                 </div>
                             </div>
                         </div>
@@ -267,16 +272,18 @@
 </li>
 <!-- Online Services Menu End -->
                 <li>
-  <button class="search-btn"><i class="mdi mdi-tab-search"></i></button>
-</li>
+                <button><i class="mdi mdi-tab-search"></i></button>
+            </li>
             </ul>
         </div>
     </div>
 </nav>
  </div>
 <!-- Navbar End -->
+    <!-- Navbar End -->
 
-    <!-- Floating Link Icon Button -->
+    <!-- Toggle Button -->
+<!-- Floating Link Icon Button -->
 <button id="toggleLinksBtn" 
         class="btn btn-success square shadow d-flex align-items-center justify-content-center position-fixed" 
         type="button" 
@@ -313,366 +320,46 @@
 <!-- End of TOggle -->
     <!-- END HOME -->
 
-    <!-- Your content starts here -->
-<div class="notice-container">
+    <!-- END HOME -->
 
-    <ul class="nav nav-tabs" id="noticeTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-notices" type="button" role="tab" aria-controls="all-notices" aria-selected="true">All Academic Notices</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="undergrad-tab" data-bs-toggle="tab" data-bs-target="#undergrad-notices" type="button" role="tab" aria-controls="undergrad-notices" aria-selected="false">Undergraduate Notices</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="postgrad-tab" data-bs-toggle="tab" data-bs-target="#postgrad-notices" type="button" role="tab" aria-controls="postgrad-notices" aria-selected="false">Postgraduate Notices</button>
-        </li>
-    </ul>
-
-    <div class="tab-content" id="noticeTabsContent">
-        
-        <div class="tab-pane fade show active" id="all-notices" role="tabpanel" aria-labelledby="all-tab">
-            <div class="row">
-                
-                <div class="col-md-4">
-                    <ul class="notice-list">
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত আইন শৃঙ্খলা ভঙ্গের কারণে শাস্তি প্রদান প্রসঙ্গে</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="notice-list">
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="notice-list">
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="notice-item">
-                            <div class="notice-date-box">
-                                <div class="month">14 OCT</div>
-                                <div class="year">2025</div>
-                            </div>
-                            <div class="notice-content">
-                                <a href="#">পরীক্ষা সংক্রান্ত সকল নোটিশ এখানে পাওয়া যাবে প্রধান প্রধান বিষয় গুলো</a>
-                                <a href="images/achive.jpg" class="download-link">
-                                    <i class="mdi mdi-cloud-download"></i>
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        </ul>
-                </div>
-
-                
-                
-            </div>
-        </div>
-        
-        <div class="tab-pane fade" id="undergrad-notices" role="tabpanel" aria-labelledby="undergrad-tab">
-            <p class="text-center p-5">Undergraduate notices will be displayed here.</p>
-        </div>
-        <div class="tab-pane fade" id="postgrad-notices" role="tabpanel" aria-labelledby="postgrad-tab">
-            <p class="text-center p-5">Postgraduate notices will be displayed here.</p>
-        </div>
-        
-    </div>
-
+    <!-- Page content Start -->
+<div class="container mt-5 mb-5">
+       <div class="row">
+        <div class="col-lg-3">
+            <section class="categories-section-vol">
+    <div class="container">
+        <div class="categories-title-vol">DUET BULLETIN
 </div>
+        <div class="categories-list">
+            <div class="category-item"> <i class="mdi mdi-arrow-right-drop-circle"></i> <a href="duet-bulletin.html">Vol 08, Issue 01, December 2024</a></div>
+            <div class="category-item"><i class="mdi mdi-arrow-right-drop-circle"></i> <a href="vol-7.html">Vol 07, Issue 01, December 2023
+</a></div>
+            <div class="category-item" style="color: #009F51;"><i class="mdi mdi-arrow-right-drop-circle"></i> <a href="vol-6.html">Vol. 6, Issue 1, December 2022
+</a></div>
+            <div class="category-item"><i class="mdi mdi-arrow-right-drop-circle"></i> <a href="vol-5.html">Vol. 5, Issue 1, December 2021
+</a></div>
+            <div class="category-item"><i class="mdi mdi-arrow-right-drop-circle"></i> <a href="vol-4.html">Vol. 4, Issue 1, February 2020
+</a></div>
+            <div class="category-item"><i class="mdi mdi-arrow-right-drop-circle"></i> <a href="vol-3.html">Vol. 3, Issue 1, June 2018
+</a></div>
+            <div class="category-item"><i class="mdi mdi-arrow-right-drop-circle"></i> <a href="vol-2.html">Vol. 2, Issue 1, June 2017
+</a></div>
+            <div class="category-item"> <i class="mdi mdi-arrow-right-drop-circle"></i> <a href="vol-1.html">Vol. 1, Issue 1, June 2014
+</a></div>
+        </div>
+    </div>
+</section>
+        </div>
+        <div class="col-lg-7">
+            <h4>Vol. 6, Issue 1, December 2022
+</h4>
+            <embed src="pdf/vol-6-issue-1-december-2022-1751368314.pdf" type="application/pdf" width="900" height="700">
+</embed>
+        </div>
+       </div>
+     </div>
+<!-- Page Content End Here -->
+
     
         <!-- START FOOTER -->
  <footer class="footer-main">
@@ -830,7 +517,6 @@
     <div class="copyright">
         <b>DUET &copy; Copyright 2025</b> | All Rights Reserved | Powered by <b>Computer Center</b> | Last Update: <b>Oct 13, 2025</b>
     </div>
-
 </footer>
     <!-- END FOOTER -->
 

@@ -1,0 +1,105 @@
+/* Gallery Styles */
+.useSliderPlugin {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.useSliderPlugin img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.useSliderPlugin img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Fullscreen Lightbox Styles */
+.fullScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.fullScreen.active {
+    display: flex !important;
+}
+
+.fullScreen img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.lightbox-nav {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 100000;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.lightbox-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+#prevIcon { 
+    left: 30px; 
+}
+
+#nextIcon { 
+    right: 30px; 
+}
+
+#cancelIcon { 
+    top: 30px; 
+    right: 30px; 
+    font-size: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .useSliderPlugin {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    
+    .useSliderPlugin img {
+        height: 150px;
+    }
+    
+    .lightbox-nav {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
+    #prevIcon { left: 15px; }
+    #nextIcon { right: 15px; }
+    #cancelIcon { top: 15px; right: 15px; }
+}
