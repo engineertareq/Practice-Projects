@@ -1,1098 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <title>Dhaka University of Engiring Technology</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
-    <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
-    <meta content="Themesdesign" name="author" />
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/duetfavicon.png">
-    <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <!-- Pe-icon-7 icon -->
-    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
-    <!--Slider-->
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/owl.transitions.css" />
-    <!-- magnific pop-up -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .timeline-section {
+    padding: 60px 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #e0e0e0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    z-index: 0;
+}
+
+.timeline-item {
+    padding: 10px 0;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 30px;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #4CAF50; /* Green dot */
+    border: 2px solid white;
+    top: 15px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -8px; /* Half of dot width */
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -8px; /* Half of dot width */
+}
+
+.timeline-date {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    float: right;
+    margin-right: -45px; /* Adjust to position date next to line */
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    float: left;
+    margin-left: -45px; /* Adjust to position date next to line */
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 20px; /* Space for the date */
+}
+
+.timeline-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.timeline-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 15px;
+        text-align: left !important;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item::after {
+        left: 22px !important;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+        position: absolute;
+        left: 60px; /* Align with content */
+        top: 0;
+    }
+
+    .timeline-content {
+        margin-top: 50px; /* More space for date on smaller screens */
+    }
+}
+    </style>
 </head>
-
-
-<body data-bs-spy="scroll" data-bs-target="#navbarCollapse">
-
-    <!-- TAGLINE HEADER START-->
-    <div class="topbar">
-        <div class="container">
-            <div class="float-start">
-                <div class="phone-topbar">
-                    <ul class="list-inline topbar-link mb-0">
-                        <li><a href="services.html"><i class="mdi mdi-view-list">Services</i></a></li>
-                        <li><a href="admission.html"><i class="mdi mdi-clipboard-check-outline"> Admission</i></a></li>
-                        <li><a href="central-library.html"><i class="mdi mdi-book-open-page-variant"> Library</i></a></li>
-                        <li><a href="peoples.html"><i class="mdi mdi-account-group-outline"> People</i></a></li>
-                        <li><a href="https://alumni.duetbd.org/" target="_blank"><i class="mdi mdi-school-outline"> Alumni</i></a></li>
-                        <li><a href="event-list.html"><i class="mdi mdi-calendar-multiselect"> Events</i></a></li>
-                        <li><a href="citizen-charter.html"><i class="mdi mdi-file-document-outline"> Citizen Charter</i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="float-end">
-                <ul class="list-inline topbar-social pb-0 pt- mt-2 mb-0">
-                    <li class="list-inline-item ps-2"><a href="https://www.facebook.com/eduduet/" class=""><i class="mdi mdi-facebook"></i></a></li>
-                    <li class="list-inline-item ps-2"><a href="https://mail.google.com/a/duet.ac.bd" class=""><i class="mdi mdi-email"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <!-- Static navbar -->
-
-    <!--Navbar Start-->
-    <!--Navbar Start-->
- <div class="container">
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark navbar-light" style="padding-top: 10px; padding-bottom: 10px;">
+<body>
+    <section class="timeline-section">
     <div class="container">
-        <a class="navbar-brand logo" href="index.html">
-            <img src="images/duet-logo.png" class="logo-light" alt="" height="60">
-            <img src="images/duet-logo.png" class="logo-dark" alt="" height="60">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="mySidenav">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link smoothlink">HOME</a>
-                </li>
-                
-                <!-- About DUET Mega Menu -->
-                <li class="nav-item dropdown mega-menu position-static">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        ABOUT DUET <i class="mdi mdi-chevron-down"></i>
-    </a>
-    <div class="dropdown-menu w-100 start-0 top-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="p-3">
-                        <h6 class="mega-menu-title">Know More About Duet</h6>
-                        <a class="dropdown-item" href="history.html">History</a>
-                        <a class="dropdown-item" href="mission-vision.html">Vision & Mission</a>
-                        <a class="dropdown-item" href="at-a-glance.html">At A Glance</a>
-                        <a class="dropdown-item" href="duet-act.html">DUET Act</a>
-                        <a class="dropdown-item" href="duet-organization.html">DUET Organization</a>
-                        <a class="dropdown-item" href="duet-gallery.html">DUET Gallery</a>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="p-3">
-                        <img src="images/c1.jpg" alt="" style="height: 300px; width: 750px; border-radius: 5px; border: 4px solid rgb(14, 50, 196);">
-                    </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2005</div>
+                <div class="timeline-content">
+                    <img src="images/achive.jpg" alt="DUET Building">
+                    <h3>DUET</h3>
+                    <p>Hence September 1, 2003 became a historic day when the institute became an autonomous statutory organization of Government of the People’s Republic of Bangladesh under the Dhaka University of Engineering and Technology, Gazipur Act 2003.</p>
                 </div>
             </div>
-        </div>
-    </div>
-</li>
-
-                <!-- Notices Mega Menu -->
-                <li class="nav-item dropdown mega-menu position-static">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        NOTICES <i class="mdi mdi-chevron-down"></i>
-    </a>
-    <div class="dropdown-menu w-100 start-0 top-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="p-3">
-                        <h6 class="mega-menu-title">Know More About Duet</h6>
-                        <a class="dropdown-item" href="allnotice.html">All Notice</a>
-                        <a class="dropdown-item" href="academic.html">Academic Notice</a>
-                        <a class="dropdown-item" href="admission-notice.html">Admission Notice</a>
-                        <a class="dropdown-item" href="career-notice.html">Career Notice</a>
-                        <a class="dropdown-item" href="tender-notice.html">Tender Notice</a>
-                        <a class="dropdown-item" href="others-notice.html">Others</a>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="p-3">
-                        <img src="images/notice.webp" alt="All Notice" style="height: 300px; width: 750px; border-radius: 5px; border: 4px solid rgb(14, 50, 196);">
-                    </div>
+            <div class="timeline-item">
+                <div class="timeline-date">1988</div>
+                <div class="timeline-content">
+                    <img src="images/ec.jpg" alt="Another building">
+                    <h3>Another Event</h3>
+                    <p>Details about another event that happened in 1988. This could be about the establishment of the institute or another significant milestone.</p>
                 </div>
             </div>
-        </div>
-    </div>
-</li>
-<!-- Notices Mega Menu End -->
-
-                <!-- Academic Mega Menu -->
-                <li class="nav-item dropdown mega-menu">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ACADEMIC <i class="mdi mdi-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu mega-menu-content">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <h6 class="mega-menu-title">Departments</h6>
-                                    <a class="dropdown-item" href="dept-cse.html">Computer Science & Engineering</a>
-                                    <a class="dropdown-item" href="dept-eee.html">Electrical & Electronic Engineering</a>
-                                    <a class="dropdown-item" href="dept-ce.html">Civil Engineering</a>
-                                    <a class="dropdown-item" href="dept-me.html">Mechanical Engineering</a>
-                                    <a class="dropdown-item" href="dept-ipe.html">Industrial & Production Engineering</a>
-                                    <a class="dropdown-item" href="dept-ete.html">Electronics & Telecommunication Engineering</a>
-                                </div>
-                                <div class="col-lg-4">
-                                    <h6 class="mega-menu-title">Programs</h6>
-                                    <a class="dropdown-item" href="undergraduate.html">Undergraduate Programs</a>
-                                    <a class="dropdown-item" href="postgraduate.html">Postgraduate Programs</a>
-                                    <a class="dropdown-item" href="phd-programs.html">PhD Programs</a>
-                                    <a class="dropdown-item" href="academic-calendar.html">Academic Calendar</a>
-                                    <a class="dropdown-item" href="syllabus.html">Syllabus</a>
-                                </div>
-                                <div class="col-lg-4">
-                                    <h6 class="mega-menu-title">Academic Resources</h6>
-                                    <a class="dropdown-item" href="central-library.html">Central Library</a>
-                                    <a class="dropdown-item" href="e-learning.html">E-Learning</a>
-                                    <a class="dropdown-item" href="research.html">Research</a>
-                                    <a class="dropdown-item" href="journals.html">Journals</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Office Mega Menu -->
-                <li class="nav-item dropdown mega-menu">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        OFFICE & ADMISSION <i class="mdi mdi-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu mega-menu-content">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <h6 class="mega-menu-title">Administrative Offices</h6>
-                                    <a class="dropdown-item" href="registrar-office.html">Registrar's Office</a>
-                                    <a class="dropdown-item" href="controller-office.html">Controller of Examinations</a>
-                                    <a class="dropdown-item" href="finance-office.html">Finance Office</a>
-                                    <a class="dropdown-item" href="admin-office.html">Administration Office</a>
-                                </div>
-                                <div class="col-lg-4">
-                                    <h6 class="mega-menu-title">Academic Offices</h6>
-                                    <a class="dropdown-item" href="academic-office.html">Academic Office</a>
-                                    <a class="dropdown-item" href="dean-office.html">Dean's Office</a>
-                                    <a class="dropdown-item" href="department-office.html">Department Offices</a>
-                                    <a class="dropdown-item" href="admission-office.html">Admission Office</a>
-                                </div>
-                                <div class="col-lg-4">
-                                    <h6 class="mega-menu-title">Support Services</h6>
-                                    <a class="dropdown-item" href="computer-center.html">Computer Center</a>
-                                    <a class="dropdown-item" href="medical-center.html">Medical Center</a>
-                                    <a class="dropdown-item" href="career-office.html">Career Guidance</a>
-                                    <a class="dropdown-item" href="student-affairs.html">Student Affairs</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Publication Menu -->
-                 <li class="nav-item dropdown mega-menu position-static">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        PUBLICATION <i class="mdi mdi-chevron-down"></i>
-    </a>
-    <div class="dropdown-menu w-100 start-0 top-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="p-3">
-                        <h6 class="mega-menu-title">See all of our Publication</h6>
-                        <a class="dropdown-item" href="duet-bulletin.html">DUET Bulletin</a>
-                        <a class="dropdown-item" href="duet-journal.html">Duet Journal</a>
-                        <a class="dropdown-item" href="convocation-speech.html">Convocation Speech</a>
-                        <a class="dropdown-item" href="conference-procedings.html">Confarence Procedings</a>
-                        <a class="dropdown-item" href="list-of-publication.html">List of Publication</a>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="p-3">
-                        <img src="images/Publications.png" alt="All Notice" style="height: 300px; width: 730px; border-radius: 5px; border: 4px solid rgb(14, 50, 196);">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</li>
-                 <!-- Publication Menu End -->
-                <!-- APA -->
-                 <li class="nav-item">
-                    <a href="index.html" class="nav-link smoothlink">APA</a>
-                <!-- Notices Mega Menu -->
-                <li class="nav-item dropdown mega-menu position-static">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        ONLINE SERVICE <i class="mdi mdi-chevron-down"></i>
-    </a>
-    <div class="dropdown-menu w-100 start-0 top-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="p-3">
-                        <h6 class="mega-menu-title">All of Our Online Services</h6>
-                        <a class="dropdown-item" href="e-learning.html">E-Learning Platform</a>
-                        <a class="dropdown-item" href="admission-system.html">Admisssion System</a>
-                        <a class="dropdown-item" href="journal-managment.html">Journal Managment System</a>
-                        <a class="dropdown-item" href="#">OBE Based Profile Managment System</a>
-                        <a class="dropdown-item" href="#">Vehical Requision & Billing System</a>
-                        <a class="dropdown-item" href="others-notice.html">DUET Payrool</a>
-                        <a class="dropdown-item" href="others-notice.html">DUET Getway</a>
-                        <a class="dropdown-item" href="others-notice.html">Online Job Admisiion Submission Portal</a>
-                        <a class="dropdown-item" href="others-notice.html">D-Nothi</a>
-                        <a class="dropdown-item" href="others-notice.html">DUET Clearence System</a>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="p-3">
-                        <img src="images/online-service.jpg" alt="All Notice" style="height: 500px; width: 700px; border-radius: 5px; border: 4px solid rgb(14, 50, 196);">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</li>
-<!-- Notices Mega Menu End -->
-                <li>
-                <button><i class="mdi mdi-tab-search"></i></button>
-            </li>
-            </ul>
-        </div>
-    </div>
-</nav>
- </div>
-<!-- Navbar End -->
-    <!-- Navbar End -->
-
-    <!-- Toggle Button -->
-<!-- Floating Link Icon Button -->
-<button id="toggleLinksBtn" 
-        class="btn btn-success square shadow d-flex align-items-center justify-content-center position-fixed" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#importantLinks" 
-        aria-expanded="false" 
-        aria-controls="importantLinks"
-        style="top: 120px; left: 0px; z-index: 1060; width:50px; height:40px;">
-    <i class="mdi mdi-link-variant" style="font-size:20px; line-height:1;"></i>
-</button>
-
-<!-- Collapsible Important Links Box -->
-<div class="collapse" id="importantLinks">
-    <div class="card card-body shadow border-0 position-fixed" 
-         style="top: 110px; left: 50px; width:280px; z-index:1050;">
-        <h6 class="fw-bold mb-3 text-success">Important Links</h6>
-        <ul class="list-unstyled mb-0">
-            <li><a href="#">Message from the Vice-Chancellor</a></li>
-            <li><a href="#">Office of the Vice-Chancellor</a></li>
-            <li><a href="#">Office of the Pro-Vice-Chancellor</a></li>
-            <li><a href="#">At a Glance</a></li>
-            <li><a href="#">Research</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Downloadable Forms</a></li>
-            <li><a href="#">APA & National Integrity Strategy</a></li>
-            <li><a href="#">eRegistration (Undergraduate)</a></li>
-            <li><a href="#">eRegistration (Postgraduate)</a></li>
-            <li><a href="#">D-Nothi</a></li>
-        </ul>
-    </div>
-</div>
-
-
-<!-- End of TOggle -->
-    <!-- END HOME -->
-<section>
-    <div>
-      <img src="images/c2.jpg" alt="" style="height: 500px; width: 2200px; filter: brightness(50%);">
-      </div>
-</section>
-
-    <!-- END HOME -->
-
-    <!-- Start EVents & Testmunial -->
-    <div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
-                    <div class="card" style="width: 18rem; border: none;">
-                        <img src="images/dr-mohammad-zoynal-abedin.jpg" class="rounded-circle profile-img" alt="..." style="padding-bottom: 10px;">
-                    </div>
-                    <p class="card-text">Welcome to the Website of Dhaka University of Engineering & Technology, Gazipur.<br>
-                    Dhaka University of Engineering & Technology, Gazipur (abbreviated as DUET) is a pioneer in engineering education in Bangladesh especially for the diploma engineers. DUET was founded as the College of Engineering, Dhaka in 1980. It was then renamed as Dhaka Engineering College (DEC) under the University of Dhaka in 1981, and used to offer Bachelor of Engineering</p>
-                    <a href="#" class="btn btn-primary">View More</a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="container mt-3">
-                    <h6 class="text-center mt-5">Ongoing and Upcoming Events</h6>
-                    <br>
-                    <!-- Nav pills -->
-                    <ul class="nav nav-pills justify-content-center" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="pill" href="#home" id="noticesTab">Notices</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="pill" href="#menu1" id="newsTab">News</a>
-                        </li>
-                    </ul>
-
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div id="home" class="container tab-pane active"><br>
-                            <div class="events-container" id="noticesContainer">
-                                <!-- Event 1 -->
-                                <div class="event-row notice-item">
-                                    <div class="event-col date-col">15 OCT 2025</div>
-                                    <div class="event-col content-col">Eligibility Result for M.Sc. Engg / Min IWE</div>
-                                </div>
-                                <div class="event-row notice-item">
-                                    <div class="event-col year-col">2025</div>
-                                    <div class="event-col content-col"><i class="mdi mdi-file-pdf-box"></i> Admission Notices</div>
-                                </div>
-
-                                <!-- Event 2 -->
-                                <div class="event-row notice-item">
-                                    <div class="event-col date-col">15 OCT 2025</div>
-                                    <div class="event-col content-col">Eligibility Result for M.Sc. Engg / M.Engg in ICT</div>
-                                </div>
-                                <div class="event-row notice-item">
-                                    <div class="event-col year-col">2025</div>
-                                    <div class="event-col content-col"><i class="mdi mdi-file-pdf-box"></i> Admission Notices</div>
-                                </div>
-
-                                <!-- Event 3 -->
-                                <div class="event-row notice-item">
-                                    <div class="event-col date-col">15 OCT 2025</div>
-                                    <div class="event-col content-col">Eligibility Result for M.Sc. Engg / M.Engg in IEE and PSD in IEE</div>
-                                </div>
-                                <div class="event-row notice-item">
-                                    <div class="event-col year-col">2025</div>
-                                    <div class="event-col content-col"><i class="mdi mdi-file-pdf-box"></i> Admission Notices</div>
-                                </div>
-
-                                <!-- Event 4 -->
-                                <div class="event-row notice-item">
-                                    <div class="event-col date-col">15 OCT 2025</div>
-                                    <div class="event-col content-col">Eligibility Result for M.Sc. Program in Chemistry</div>
-                                </div>
-                                <div class="event-row notice-item">
-                                    <div class="event-col year-col">2025</div>
-                                    <div class="event-col content-col"><i class="mdi mdi-file-pdf-box"></i> Admission Notices</div>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-                        <div id="menu1" class="container tab-pane fade"><br>
-                            <div class="events-container" id="newsContainer">
-                                
-                                <!-- Event 2 -->
-                                <div class="event-row notice-item">
-                                    <div class="event-col date-col">15 OCT 2025</div>
-                                    <div class="event-col content-col">Eligibility Result for M.Sc. Engg / M.Engg in ICT</div>
-                                </div>
-                                <div class="event-row notice-item">
-                                    <div class="event-col year-col">2025</div>
-                                    <div class="event-col content-col"><i class="mdi mdi-file-pdf-box"></i> Admission Notices</div>
-                                </div>
-
-                                <!-- Event 3 -->
-                                <div class="event-row notice-item">
-                                    <div class="event-col date-col">15 OCT 2025</div>
-                                    <div class="event-col content-col">Eligibility Result for M.Sc. Engg / M.Engg in IEE and PSD in IEE</div>
-                                </div>
-                                <div class="event-row notice-item">
-                                    <div class="event-col year-col">2025</div>
-                                    <div class="event-col content-col"><i class="mdi mdi-file-pdf-box"></i> Admission Notices</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <!-- End of Events & Testmunial -->
-
-
-    <!-- Start About US -->
-    <div style="background-color: #F7F7F7;">
-        <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
-        <div class="row">
-            <div class="col-lg-6">
-              <h3>About US</h3>
-              <h6>Welcome to Dhaka University of Engineering & Technology, Gazipur.
-
-</h6>
-<p>
-    Dhaka University of Engineering & Technology, Gazipur (abbreviated as DUET) was founded as the College of Engineering, Dhaka with the motto “Technology is the Advancement” at its temporary campus at Tejgaon, Dhaka, Bangladesh in 1980. It was then renamed as Dhaka Engineering College (DEC) under the University of Dhaka in 1981, and used to offer Bachelor of Engineering programs in Civil, Electrical, and Mechanical disciplines. With the passage of time, Dhaka Engineering College was empowered autonomy under the Bangladesh Institute of Technology ordinance no. XXI of 1986, under the name Bangladesh Institute of Technology, Dhaka (Abbreviated as BITD) to award undergraduate and postgraduate degrees. 
-</p>
-<button type="button" class="btn btn-outline-primary">Read More</button>
-            </div>
-            <div class="col-lg-6">
-           <div class="container-fluid bg-light vh-50 d-flex align-items-center justify-content-center"></div>
-        <div class="main-layout-area p-5">
-            <div class="row g-3">
-                <div class="col-12 col-lg-5 image-group-1">
-                    <div class="position-relative">
-                        <img src="images/bitd.jpg" class="img-fluid image-1" alt="Architectural rendering of building top">
-
-                        <img src="images/ec.jpg" class="img-fluid image-2 shadow" alt="Architectural rendering of building entrance">
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-7 image-group-2">
-                    <img src="images/duet.jpg" class="img-fluid image-3" alt="Building view across a large field">
-                </div>
-            </div>
-        </div>
-        </div>
-            </div>
-        </div>
-    </div>
-    </div>   
-    
-    <!-- START Faculty -->
-<section class="section pt-5 pb-3">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-center faculty-header-container">
-                    <h2 class="faculty-title">Faculty</h2>
-                    <p class="faculty-subtitle">At present there are four faculties in the university</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-
-            <div class="col-lg-3 mb-4">
-                <div class="faculty-box p-4">
-                    <h5 class="faculty-box-title">Faculty of Civil Engineering</h5>
-                    <ul class="faculty-list list-unstyled">
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Civil Engineering</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Architecture</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Institute of Water and Environment</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Center for Climate Change & Sustainability Research</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-3 mb-4">
-                <div class="faculty-box p-4">
-                    <h5 class="faculty-box-title">Faculty of Mechanical Engineering</h5>
-                    <ul class="faculty-list list-unstyled">
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Mechanical Engineering</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Textile Engineering</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Industrial and Production Engineering</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Materials and Metallurgical Engineering</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Chemical Engineering</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-3 mb-4">
-                <div class="faculty-box p-4">
-                    <h5 class="faculty-box-title">Faculty of Electrical and Electronic Engineering</h5>
-                    <ul class="faculty-list list-unstyled">
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Electrical and Electronic Engineering</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Computer Science and Engineering</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Institute of Information & Communication Technology</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-3 mb-4">
-                <div class="faculty-box p-4">
-                    <h5 class="faculty-box-title">Faculty of Science</h5>
-                    <ul class="faculty-list list-unstyled">
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Chemistry</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Mathematics</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Physics</li>
-                        <li><i class="mdi mdi-checkbox-marked-circle faculty-icon"></i> Department of Humanities and Social Sciences</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
+            <!-- Add more timeline items as needed --></div>
     </div>
 </section>
-    <!-- END of Faculty -->
-    
-    <!-- University Statistics -->
-    <section class="section bg-light pt-5">
-        <div class="container">
-            <div class="row" id="counter">
-                <div class="col-lg-7">
-                    <div class="counter-info mt-4">
-                        <h3>University Statistics
-</h3>
-                        <p>September 1, 2003, became a historic day when the BITD became an autonomous statutory organization of the Government of the People’s Republic of Bangladesh under the Dhaka University of Engineering and Technology, Gazipur Act 2003. It is located on a compact 23.42-acre land in the Gazipur is only about twenty kilometers away from Shahjalal International Airport. DUET offers high-quality research and education through 14 departments and 3 institutes under 4 faculties. DUET has over 276 faculty members, 161 officers, and over 3849+ undergraduate and graduate students. DUET has 12406+ Graduated students enjoying extraordinary success all over the world.</p>
-                        <div class="mt-4">
-                            <a href="" class="btn btn-primary">Read More <i class="mdi mdi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5" style="background-color: #ffffff;">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="counter-box mt-4">
-                                <div class="d-flex box-shadow bg-white p-4 rounded">
-                                    <div class="counter-icon me-3 flex-shrink-0">
-                                        <i class="mdi mdi-gift text-primary h2"></i>
-                                    </div>
-                                    <div class="flex-grow-1 ps-2">
-                                        <h3 class="counter-count"> <span class="counter-value" data-count="276">0</span>
-                                            +</h3>
-                                        <h5 class="mt-2 mb-0 f-17">Teacher </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-6">
-                            <div class="counter-box mt-4">
-                                <div class="d-flex box-shadow bg-white p-4 rounded">
-                                    <div class="counter-icon me-3 flex-shrink-0">
-                                        <i class="mdi mdi-progress-download text-primary h2"></i>
-                                    </div>
-                                    <div class="flex-grow-1 ps-2">
-                                        <h3 class="counter-count"> <span class="counter-value" data-count="161"></span> +
-                                        </h3>
-                                        <h5 class="mt-2 mb-0 f-17">Officer </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="row mt-1">
-                        <div class="col-lg-6">
-                            <div class="counter-box mt-4">
-                                <div class="d-flex box-shadow bg-white p-4 rounded">
-                                    <div class="counter-icon me-3 flex-shrink-0">
-                                        <i class="mdi mdi-emoticon-outline text-primary h2"></i>
-                                    </div>
-                                    <div class="flex-grow-1 ps-2">
-                                        <h3 class="counter-count"> <span class="counter-value" data-count="3839">0</span> +
-                                        </h3>
-                                        <h5 class="mt-2 mb-0 f-17">Cureent Student </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-6">
-                            <div class="counter-box mt-4">
-                                <div class="d-flex box-shadow bg-white p-4 rounded">
-                                    <div class="counter-icon me-3 flex-shrink-0">
-                                        <i class="mdi mdi-timer text-primary h2"></i>
-                                    </div>
-                                    <div class="flex-grow-1 ps-2">
-                                        <h3 class="counter-count"> <span class="counter-value" data-count="12406"></span> +
-                                        </h3>
-                                        <h5 class="mt-2 mb-0 f-17">Gradguate Students </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- University Statistics End-->
-     
-    <!-- START BLOG -->
-    <section class="section bg-light" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="title-box text-center">
-                        <h6 class="title-sub-title mb-0 text-primary f-17">Latest news
-</h6>
-                        <h6 class="mt-4">Stay informed and read the latest news of DUET
-
-</h6>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="blog-s">
-                <div class="row mt-0">
-                <div class="col-lg-4">
-                    <div class="blog-box mt-4">
-                        <div class="blog-img">
-                            <img src="images/blog/blog1.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="blog-content mt-3">
-                                <a href="" class="blog-title">ডুয়েট ও বিআইএম-এর মধ্যে সমঝোতা স্মারক স্বাক্ষরিত</a>
-                            </h5>
-                            <div class="mt-4">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <time datetime="" style="color: #009F51;"><i class="mdi mdi-update" style="color: #f30808;"></i> August 28 2025</time>
-                                    </div>
-                                    <div class="col-lg-6" style="text-align: right;">
-                                        <a href="#" style="color: #009F51;">View More <i class="mdi mdi-arrow-right-bold-circle-outline"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-box mt-4">
-                        <div class="blog-img">
-                            <img src="images/blog/blog2.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="blog-content mt-3">
-                                <a href="" class="blog-title">মাননীয় শিক্ষা উপদেষ্টার সঙ্গে উপাচার্য মহোদয়ের বৈঠক অনুষ্ঠিত
-</a>
-                            </h5>
-                            <div class="mt-4">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <time datetime="" style="color: #009F51;"><i class="mdi mdi-update" style="color: #f30808;"></i> August 18 2025</time>
-                                    </div>
-                                    <div class="col-lg-6" style="text-align: right;">
-                                        <a href="#" style="color: #009F51;">View More <i class="mdi mdi-arrow-right-bold-circle-outline"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-box mt-4">
-                        <div class="blog-img">
-                            <img src="images/blog/blog3.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="blog-content mt-3">
-                                <a href="" class="blog-title">হিট প্রকল্পের উপ-প্রকল্প বাস্তবায়নের জন্য ইউজিসির সঙ্গে ডুয়েটের চুক্তি
-</a>
-                            </h5>
-                            <div class="mt-4">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <time datetime="" style="color: #009F51;"><i class="mdi mdi-update" style="color: #f30808;"></i> August 27 2025</time>
-                                    </div>
-                                    <div class="col-lg-6" style="text-align: right;">
-                                        <a href="#" style="color: #009F51;">View More <i class="mdi mdi-arrow-right-bold-circle-outline"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-            <div class="mt-4 text-center">
-                <button type="submit" class="btn btn-outline-primary">See More <i class="mdi mdi-arrow-right-bold-circle"></i></button>
-            </div>
-            </div>
-        </div>
-    </section>
-    <!-- END BLOG -->
-    
-     <!-- Annual Performance Agreement (APA) -->
-      <section class="section pt-5 pb-5">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-center section-header-container mb-5">
-                    <h2 class="section-main-title">Annual Performance Agreement (APA)</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="custom-card-box bordered-card">
-                    <div class="icon-header">
-                        <img src="images/info-right.png" alt="জাতীয় শুদ্ধাচার কৌশল Icon" class="card-icon">
-                    </div>
-                    <h5 class="card-title">জাতীয় শুদ্ধাচার কৌশল</h5>
-                    <ul class="card-list list-unstyled">
-                        <li>কর্মপরিকল্পনা</li>
-                        <li>জাতীয় শুদ্ধাচার কৌশল</li>
-                        <li>প্রতিবেদন সংক্রান্ত বার্ষিক চুক্তি পরিকল্পনা</li>
-                        <li>ফোকাল পয়েন্ট কর্মকর্তাগণ</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="custom-card-box">
-                    <div class="icon-header">
-                        <img src="images/innivation.png" alt="বার্ষিক কর্মসম্পাদন চুক্তি Icon" class="card-icon">
-                    </div>
-                    <h5 class="card-title">বার্ষিক কর্মসম্পাদন চুক্তি</h5>
-                    <ul class="card-list list-unstyled">
-                        <li>এ.পি.এ টিম মেম্বারস ও টি.ম লিডারবৃন্দের তালিকা</li>
-                        <li>প্রশিক্ষণ ও মূল্যায়ন প্রতিবেদন</li>
-                        <li>বার্ষিক কর্ম-সম্পাদন চুক্তিসমূহ</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="custom-card-box">
-                    <div class="icon-header">
-                        <img src="images/ovijog.png" alt="সেবা প্রদান প্রতিশ্রুতি Icon" class="card-icon">
-                    </div>
-                    <h5 class="card-title">সেবা প্রদান প্রতিশ্রুতি</h5>
-                    <ul class="card-list list-unstyled">
-                        <li>কর্মকর্তা/কর্মচারি কল্যাণ প্রশিক্ষণে নির্দেশিকা</li>
-                        <li>ফোকাল পয়েন্ট কর্মকর্তা</li>
-                        <li>সাংগঠনিক কাঠামো</li>
-                        <li>সেবা প্রদান প্রতিশ্রুতি</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <div class="row">
-
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="custom-card-box bordered-card">
-                    <div class="icon-header">
-                        <img src="images/mis.png" alt="জাতীয় শুদ্ধাচার কৌশল Icon" class="card-icon">
-                    </div>
-                    <h5 class="card-title">জাতীয় শুদ্ধাচার কৌশল</h5>
-                    <ul class="card-list list-unstyled">
-                        <li>কর্মপরিকল্পনা</li>
-                        <li>জাতীয় শুদ্ধাচার কৌশল</li>
-                        <li>প্রতিবেদন সংক্রান্ত বার্ষিক চুক্তি পরিকল্পনা</li>
-                        <li>ফোকাল পয়েন্ট কর্মকর্তাগণ</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="custom-card-box">
-                    <div class="icon-header">
-                        <img src="images/apa.png" alt="বার্ষিক কর্মসম্পাদন চুক্তি Icon" class="card-icon">
-                    </div>
-                    <h5 class="card-title">বার্ষিক কর্মসম্পাদন চুক্তি</h5>
-                    <ul class="card-list list-unstyled">
-                        <li>এ.পি.এ টিম মেম্বারস ও টি.ম লিডারবৃন্দের তালিকা</li>
-                        <li>প্রশিক্ষণ ও মূল্যায়ন প্রতিবেদন</li>
-                        <li>বার্ষিক কর্ম-সম্পাদন চুক্তিসমূহ</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="custom-card-box">
-                    <div class="icon-header">
-                        <img src="images/sheba.png" alt="সেবা প্রদান প্রতিশ্রুতি Icon" class="card-icon">
-                    </div>
-                    <h5 class="card-title">সেবা প্রদান প্রতিশ্রুতি</h5>
-                    <ul class="card-list list-unstyled">
-                        <li>কর্মকর্তা/কর্মচারি কল্যাণ প্রশিক্ষণে নির্দেশিকা</li>
-                        <li>ফোকাল পয়েন্ট কর্মকর্তা</li>
-                        <li>সাংগঠনিক কাঠামো</li>
-                        <li>সেবা প্রদান প্রতিশ্রুতি</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-     <!-- Annual Performance Agreement (APA) END -->
-      
-    <!-- Start Video & Achivement -->
-     <div class="container">
-        <div style="padding-bottom: 40px;">
-            <div class="row">
-           <div class="col-lg-8">
-            <iframe width="700" height="400" src="https://www.youtube.com/embed/4C2FFKkU5IQ" title="Aerial view of Dhaka University of Engineering &amp; Technology, Gazipur (DUET) captured by Drone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-           </div>
-           <div class="col-lg-4">
-            <div class="achievement-card card">
-        <!-- Card Header with Icon and Title -->
-        <div class="card-header d-flex align-items-center">
-            
-            <i class="mdi mdi-diamond" style="color: #009F51;"></i>
-            <h5 class="mb-0">Achievements</h5>
-        </div>
-
-        <!-- Card Body (Empty as per image) -->
-        <div class="card-body" style="min-height: 330px;">
-            <img src="images/achive.jpg" alt="Achivement" style="height: 300px; width: 290px;">
-        </div>
-    </div>
-           </div>
-     </div>
-        </div>
-     </div>
-     <!-- End Video & Achivement -->
-    <!-- START FOOTER -->
- <footer class="footer-main">
-        <div class="footer-ribbon">
-        <div class="footer-ribbon-text">Get in Touch</div>
-    </div>
-
-    <div class="container footer-content-padding p-4">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 mb-4">
-                <h4 class="footer-link-title">Academic & Admission</h4>
-                <ul class="footer-link-list">
-                    <li><a href="https://www.duet.ac.bd/academic-calender">Academic Calendar</a></li>
-                    <li><a href="https://www.duet.ac.bd/#">Academic Collaboration</a></li>
-                    <li><a href="https://www.duet.ac.bd/admission/undergraduate/at-a-glance">Admission for Undergraduate</a></li>
-                    <li><a href="https://www.duet.ac.bd/admission/postgraduate/at-a-glance">Admission for Postgraduate</a></li>
-                    <li><a href="https://www.duet.ac.bd/dean-list">Dean's List</a></li>
-                    <li><a href="https://www.duet.ac.bd/departments">Department</a></li>
-                    <li><a href="https://journal.duetbd.org/">DUET Journal Access</a></li>
-                    <li><a href="https://elp.duetbd.org/">e-Learning Platform</a></li>
-                    <li><a href="https://ugr.duetbd.org/">eRegistration (Undergraduate)</a></li>
-                    <li><a href="https://pgr.duetbd.org/">eRegistration (Postgraduate)</a></li>
-                    <li><a href="https://www.duet.ac.bd/institutes">Institute</a></li>
-                    <li><a href="https://www.duet.ac.bd/#">Publication</a></li>
-                    <li><a href="https://www.duet.ac.bd/#">Scholarship/Funding</a></li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 mb-4">
-                <h4 class="footer-link-title">Quick Links</h4>
-                <ul class="footer-link-list">
-                    <li><a href="https://www.duet.ac.bd/account-manual">Account Manual</a></li>
-                    <li><a href="https://www.duet.ac.bd/annual-report">Annual Report</a></li>
-                    <li><a href="https://www.duet.ac.bd/apa-and-nis-implementation">APA & National Integrity Strategy Implementation</a></li>
-                    <li><a href="https://www.duet.ac.bd/calendar-2025">Calendar 2025</a></li>
-                    <li><a href="https://www.duet.ac.bd/#">Convocation</a></li>
-                    <li><a href="https://www.duet.ac.bd/clubs-communities">DUET Clubs & Communities</a></li>
-                    <li><a href="https://www.duet.ac.bd/all-downloadable-form">Downloadable Forms</a></li>
-                    <li><a href="https://alumni.duetbd.org/">DUET Alumni Association</a></li>
-                    <li><a href="https://www.duet.ac.bd/#">DUET Directory App</a></li>
-                    <li><a href="https://www.duet.ac.bd/news-list">Latest News</a></li>
-                    <li><a href="https://www.duet.ac.bd/holiday-list">Holiday List</a></li>
-                    <li><a href="https://career.duetbd.org/">Online Job Application Submission Portal</a></li>
-                    <li><a href="https://www.duet.ac.bd/phonebook">Phonebook</a></li>
-                    <li><a href="https://www.duet.ac.bd/services">Services</a></li>
-                    <li><a href="https://www.duet.ac.bd/about/duet-act">University Act-2003</a></li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 mb-4">
-                <div class="map-container mb-3">
-                    <div style="background-color: #333; height: 200px; display: flex; align-items: center; justify-content: center; color: white; border: 1px solid #555;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14577.498736031994!2d90.418188!3d24.017849!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755da4eced0c537%3A0x8d54b38a823b5212!2sDhaka%20University%20of%20Engineering%20and%20Technology%20(DUET)!5e0!3m2!1sen!2sus!4v1760331974486!5m2!1sen!2sus" width="700" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <a href="https://maps.app.goo.gl/mwMhD5bMa9ewHDe28" class="d-block text-white text-end mt-1" style="font-size: 0.8rem;">View larger map</a>
-                </div>
-                
-                <div class="contact-info">
-                    <p>
-                        <i class="mdi mdi-map-marker" style="color: var(--duet-link-green);"></i> 
-                        <strong>Mailing Address:</strong> Registrar, Dhaka University of Engineering and Technology, Gazipur-1707, Bangladesh
-                    </p>
-                    <p>
-                        <i class="mdi mdi-phone" style="color: var(--duet-link-green);"></i> 
-                        <strong>Phone:</strong> +88-02-49274003
-                    </p>
-                    <p>
-                        <i class="mdi mdi-phone-in-talk" style="color: var(--duet-link-green);"></i> 
-                        <strong>IP (Local):</strong> 202.5.88 @ [Direct] - 320005, 320005
-                    </p>
-                    <p>
-                        <i class="mdi mdi-fax" style="color: var(--duet-link-green);"></i> 
-                        <strong>Fax:</strong> +88-02-49274001-02
-                    </p>
-                    <p>
-                        <i class="mdi mdi-contact-mail" style="color: var(--duet-link-green);"></i> 
-                        <strong>Email:</strong> reg_duet@duet.ac.bd
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    <div class="container">
-        <div class="row align-items-center">
-    
-    <div class="col-lg-3 col-md-4 col-sm-6">
-    <div class="facebook-embed-box">
-        <div class="ratio ratio-16x9" style="--bs-aspect-ratio: 30%;"> 
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Feduduet%2F&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="100%" height="100%" 
-                    style="border:none; overflow:hidden;" 
-                    scrolling="no" frameborder="0" allowfullscreen="true" 
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-        </div>
-    </div>
-</div>
-    
-    <div class="col-lg-6 col-md-4 col-sm-0 d-none d-md-block">
-        <div>
-            <img src="images/fbanner.jpg" alt="Help Desk" style="width: 95%; height: 50%; vertical-align: middle;">
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-4 col-sm-6">
-        <button 
-    type="button" 
-    class="btn btn-outline-secondary" 
-    style="border-color: #009F51; color: #009F51; white-space: nowrap;" 
-    data-bs-toggle="modal" 
-    data-bs-target="#contactModal"
->
-    Message to Web Admin 
-    <i class="mdi mdi-arrow-right"></i>
-</button>
-    </div>
-</div>
-    </div>
-    </div>
-    <!-- Modal -->
-     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            
-            <div class="modal-header" style="background-color: #f8f9fa;">
-                <h5 class="modal-title" id="contactModalLabel" style="color: black;">Contact Web Admin</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label" style="color: black;">Your Name</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label" style="color: black;">Email address</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label" style="color: black;">Your Message</label>
-                        <textarea class="form-control" id="message" rows="4" required></textarea>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn" style="background-color: #009F51; color: white;">Send Message</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal END -->
-    <div class="copyright">
-        <b>DUET &copy; Copyright 2025</b> | All Rights Reserved | Powered by <b>Computer Center</b> | Last Update: <b>Oct 13, 2025</b>
-    </div>
-
-</footer>
-    <!-- END FOOTER -->
-
-    <!-- javascript -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.mb.YTPlayer.js"></script>
-    <!-- Portfolio -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- contact init -->
-    <script src="js/contact.init.js"></script>
-    <!-- counter init -->
-    <script src="js/counter.init.js"></script>
-
-    <!-- Owl Carousel -->
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="https://unicons.iconscout.com/release/v2.0.1/script/monochrome/bundle.js"></script>
-    <script src="js/app.js"></script>
-
-<!-- Floating Toggle Js Script -->
- <script>
-document.addEventListener('click', function (event) {
-    const collapseElement = document.getElementById('importantLinks');
-    const toggleButton = document.getElementById('toggleLinksBtn');
-    const bsCollapse = bootstrap.Collapse.getInstance(collapseElement);
-
-    // If the collapse is open and user clicks outside
-    if (
-        collapseElement.classList.contains('show') &&
-        !collapseElement.contains(event.target) &&
-        !toggleButton.contains(event.target)
-    ) {
-        bsCollapse.hide();
-    }
-});
-</script>
-<!-- Floating Toggle JS Script END -->
-<!-- Notice & News Script -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const newsTab = document.getElementById('newsTab');
-    const noticesTab = document.getElementById('noticesTab');
-    const noticesContainer = document.getElementById('noticesContainer');
-    const newsContainer = document.getElementById('newsContainer');
-    
-    // Function to hide notices and show news
-    function showNews() {
-        noticesContainer.style.display = 'none';
-        newsContainer.style.display = 'block';
-    }
-    
-    // Function to show notices and hide news
-    function showNotices() {
-        noticesContainer.style.display = 'block';
-        newsContainer.style.display = 'none';
-    }
-    
-    // Event listener for News tab click
-    newsTab.addEventListener('click', function() {
-        showNews();
-    });
-    
-    // Event listener for Notices tab click
-    noticesTab.addEventListener('click', function() {
-        showNotices();
-    });
-    
-    // Bootstrap tab event listeners
-    const tabPanes = document.querySelectorAll('.tab-pane');
-    tabPanes.forEach(pane => {
-        pane.addEventListener('show.bs.tab', function(e) {
-            if (e.target.getAttribute('href') === '#menu1') {
-                showNews();
-            } else {
-                showNotices();
-            }
-        });
-    });
-});
-</script>
-<!-- Notice & News Script END -->
-
-
 </body>
-
 </html>

@@ -24,6 +24,89 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/global-hf.css">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+    <style>
+        /* Custom properties for easy color changes */
+:root {
+    --vm-green: #08A257; /* Success green from your template */
+    --vm-text-dark: #33324e;
+    --vm-shadow: 0 0 40px rgba(95, 125, 149, 0.1); /* box-shadow from your template */
+}
+
+/* 1. Section Title Styling */
+.vision-title-heading {
+    /* Custom style based on image and template title box */
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--vm-text-dark);
+}
+
+/* 2. Card Styling */
+.vision-card {
+    border-radius: 18px; /* Slightly rounded corners */
+    box-shadow: var(--vm-shadow) !important;
+    height: 100%; /* Ensures both cards are the same height if content is short */
+    border-top: solid #08A257 3px !important; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(134, 31, 31, 0.08);
+}
+
+
+.vision-card .card-title {
+    font-weight: 600;
+    color: var(--vm-text-dark);
+    margin-bottom: 0;
+}
+
+/* 3. Icon Styling */
+.vision-icon-circle {
+    /* Creates the green ring effect for the icon */
+    font-size: 20px;
+    color: var(--vm-green);
+    border: 2px solid var(--vm-green);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Adjust position of the circular icon */
+    position: relative;
+    top: -5px; 
+}
+
+/* The 'University Mission' icon has a solid center */
+.vision-icon-circle.mission-icon {
+    background-color: var(--vm-green);
+    color: white; /* Icon inside is white */
+}
+
+/* 4. List Styling */
+.vision-list {
+    margin-top: 15px;
+}
+
+.vision-list li {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 10px; /* Space for the custom bullet */
+    position: relative;
+}
+
+.vision-list li span {
+    /* Custom arrow bullet point styling */
+    color: var(--vm-green);
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: inherit;
+}
+    </style>
 </head>
 
 
@@ -329,15 +412,61 @@
     </div>
 </section>
         </div>
-        <div class="col-lg-7">
-            <h4>History</h4>
-            <p>Dhaka University of Engineering & Technology, Gazipur (abbreviated as DUET) was founded as the College of Engineering, Dhaka with the motto “Technology is the Advancement” at its temporary campus at Tejgaon, Dhaka, Bangladesh in 1980. It was then renamed as Dhaka Engineering College (DEC) under the University of Dhaka in 1981, and used to offer Bachelor of Engineering programs in Civil, Electrical, and Mechanical disciplines. With the passage of time, Dhaka Engineering College was empowered autonomy under the Bangladesh Institute of Technology ordinance no. XXI of 1986, under the name Bangladesh Institute of Technology, Dhaka (Abbreviated as BITD) to award undergraduate and postgraduate degrees. Hence September 1, 2003 became a historic day when the institute became an autonomous statutory organization of Government of the People’s Republic of Bangladesh under the Dhaka University of Engineering and Technology, Gazipur Act 2003.
+        <div class="col-lg-9">
+            <section class="section vision-mission-section">
+    <div class="container">
 
-DUET is the university of choice for future engineers and architects in Bangladesh because of lively campus life. In 1983, the campus at Tejgaon, Dhaka was shifted to its permanent campus in the heart of Gazipur city (40 km north of Dhaka, the capital city of Bangladesh), with convenient access to the Hazrat Shahjalal International Airport, Gazipur Railway Station, and Gazipur City Bus Terminals. The university’s physical expansion over the years has been significant, with new academic buildings, a number of student’s residential halls, a central library, a well equipped medical center, a student welfare center, and an auditorium complex, among other infrastructures. New educational expansions have thrived on DUET’s second nearby campus. Since 2020, the campus-wide IT infrastructure, the BdREN network, DUET e-learning platform, institutional email, DUET gateway and payroll etc. facilities have been created for the smooth online communications.
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="card vision-card box-shadow border-0">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <h4 class="card-title">University Vision</h4>
+                            <div class="vision-icon-circle">
+                                <i class="mdi mdi-eye"></i> </div>
+                        </div>
+                        
+                        <ul class="vision-list list-unstyled">
+                            <li>
+                                <span>&rsaquo;</span> To be the center of excellence for quality education, research and innovation.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-The University offers degrees in the fields of engineering, architecture in undergraduate and post-graduate levels and also conducts research and offers degrees in basic sciences at post-graduate level. The language of instruction at all levels is English, which is the official language for examinations. Students are admitted to DUET after passing a highly competitive entrance examination. DUET comprises of thirteen academic departments under four faculties. There are three academic institutes and a research center which offer postgraduate degree & research based and short term professional courses as well. The University has strong collaborations with prestigious universities and industries both home and abroad. The university maintains an Institutional Quality Assurance Cell (IQAC) that assists all academic programs in gaining accreditation from various recognized accreditation bodies through continual improvement. Through undergraduate and graduate programs, DUET’s outcome-based education (OBE) curricula address the region’s current and future pragmatic needs. In addition, DUET journal which is an indexed journal by now publishes advance research articles in a regular manner.
+            <div class="col-md-7">
+                <div class="card vision-card box-shadow border-0">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <h4 class="card-title">University Mission</h4>
+                            <div class="vision-icon-circle">
+                                <i class="mdi mdi-bullseye"></i> </div>
+                        </div>
 
-The University is being an excellent tertiary and higher-level academic institution with its commitment to quality education and research has earned a worldwide excellent reputation for producing quality graduates in various fields of engineering and science to date. Recently, DUET is ranked # 501-550 in QS Asia University rankings 2022.</p>
+                        <ul class="vision-list list-unstyled">
+                            <li>
+                                <span>&rsaquo;</span> To provide a congenial environment for world-class education, research and innovation.
+                            </li>
+                            <li>
+                                <span>&rsaquo;</span> To produce highly efficient technical professionals endowed with practical knowledge, skills and ethical values based on emerging demands.
+                            </li>
+                            <li>
+                                <span>&rsaquo;</span> To promote multi-faceted academic collaboration across universities and industries for research and innovation.
+                            </li>
+                            <li>
+                                <span>&rsaquo;</span> To contribute in national policy making for sustainable socio-economic and industrial development of the country.
+                            </li>
+                            <li>
+                                <span>&rsaquo;</span> To provide consultancy in solving technical problems at national and international levels.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         </div>
        </div>
      </div>

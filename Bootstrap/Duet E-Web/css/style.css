@@ -2611,3 +2611,221 @@ textarea.form-control {
   position: sticky;
   top: 90px; /* Change this to your header height + some spacing */
 }
+
+/* --- TIMELINE CUSTOM STYLES --- */
+
+/* General Setup */
+.timeline-section-custom {
+    padding: 60px 0;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #f9f9f9;
+}
+.container-custom {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Timeline Core: The Vertical Line */
+.timeline-custom {
+    position: relative;
+    margin: 0 auto;
+}
+.timeline-custom::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #e0e0e0; /* Light gray line */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    z-index: 0;
+}
+
+/* Timeline Item Positioning */
+.timeline-item-custom {
+    position: relative;
+    width: 50%;
+    margin-bottom: 70px; /* Increased space between items to accommodate the date box */
+}
+
+/* Left Item (First, Third, etc.) */
+.timeline-item-custom.left {
+    left: 0;
+    padding-right: 50px; 
+}
+
+/* Right Item (Second, Fourth, etc.) */
+.timeline-item-custom.right {
+    left: 50%;
+    padding-left: 50px; 
+}
+
+/* Timeline Dot */
+.timeline-item-custom::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #4353ff; /* Primary Blue from your template */
+    border: 3px solid #f9f9f9; /* Border color matches background */
+    bottom: -15px; /* Position it below the content box */
+    z-index: 1;
+}
+
+/* Dot position for Left Content */
+.timeline-item-custom.left::before {
+    right: -8px; /* Centers dot on the line */
+}
+
+/* Dot position for Right Content */
+.timeline-item-custom.right::before {
+    left: -8px; /* Centers dot on the line */
+}
+
+/* Content Box Styling */
+.timeline-content-custom {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.timeline-content-custom img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.timeline-content-custom h3 {
+    margin-top: 0;
+    color: #33324e;
+}
+
+/* Date Box Styling (Positioned under the content box, centered on the line) */
+.timeline-date-custom {
+    position: absolute;
+    bottom: -50px; /* Move below the content box, above the dot */
+    width: 80px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 5px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Positioning Date Box for Left Content */
+.timeline-item-custom.left .timeline-date-custom {
+    right: -40px; /* Half of date box width */
+    transform: translateX(50%);
+}
+
+/* Positioning Date Box for Right Content */
+.timeline-item-custom.right .timeline-date-custom {
+    left: -40px; /* Half of date box width */
+    transform: translateX(-50%);
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS (for screens less than 768px wide) --- */
+@media screen and (max-width: 768px) {
+    /* Move the vertical line to the left */
+    .timeline-custom::after {
+        left: 20px;
+    }
+
+    /* All items stack vertically on the left */
+    .timeline-item-custom,
+    .timeline-item-custom.right {
+        width: 100%;
+        left: 0;
+        padding-left: 60px; /* Space for the line/dot */
+        padding-right: 15px;
+    }
+
+    /* Move dot to the new left line */
+    .timeline-item-custom::before {
+        left: 12px;
+        right: auto; /* Reset right position */
+    }
+
+    /* Reposition the date box near the content, not the center line */
+    .timeline-date-custom {
+        position: static; /* Let it flow with the content */
+        margin-top: 15px;
+        margin-bottom: 0;
+        width: auto;
+        display: inline-block;
+        transform: none;
+        text-align: center;
+    }
+}
+
+/* Result Section */
+/* Custom styles to match the image precisely */
+/* Note: Bootstrap 5 classes handle most of the layout and typography */
+
+.accordion-button:not(.collapsed) {
+    /* Style for the *active* green Civil Engineering header */
+    color: white !important;
+    background-color: #28a745 !important; /* A darker green for the main bar */
+    border-color: #28a745 !important;
+    box-shadow: none; /* Remove default focus glow if present */
+}
+
+.accordion-button {
+    /* Style for all default (collapsed) department headers */
+    color: #333;
+    background-color: white;
+    border: 1px solid #e9ecef; /* Light gray border */
+    border-radius: .25rem !important; /* Ensure rounded corners on collapsed state */
+}
+
+/* Specific styling for the list items inside the expanded CE section */
+.list-group-item {
+    /* Custom background colors to match the subtle green shades in the image */
+    padding-left: 1.5rem; /* Equivalent of the indentation */
+}
+
+/* List of Provisionally Selected Candidates (lighter green) */
+.list-group-item:nth-child(1) {
+    background-color: #f0fdf2 !important; 
+}
+
+/* Waiting List According to Merit (slightly darker green) */
+.list-group-item:nth-child(2) {
+    background-color: #e9f7ec !important;
+}
+
+/* Remove border radius from the list items that are inside the expanded accordion body */
+.accordion-collapse.show .list-group-item:last-child {
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+/* Remove the default rounded corners from the accordion header of the expanded section */
+#headingCE .accordion-button {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+/* categories-section-admisiion for Undergraduate Admission page */
+.categories-section-ca{
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 250px;
+  height: 390px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  position: sticky;
+  top: 90px; /* Change this to your header height + some spacing */
+}
+.categories-title-ca{
+  padding-top: 15px;
+  font-weight: bold;
+}
+/* categories-ssection-admisiion for Undergraduate Admission page end here */
+
+/* Categories for Faculty of CE */

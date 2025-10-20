@@ -34,17 +34,19 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .member-image {
-            width: 120px;
-            height: 100px;
-            background-color: #e9ecef;
-            border-radius: 50px;
+            width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #006600; /* Green border color */
+    flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #6c757d;
             font-size: 14px;
-            border: 3px solid rgb(8, 134, 50);
-            overflow: hidden;
+            
+            
         }
         .member-image img {
             width: 100%;
@@ -65,6 +67,25 @@
             margin-bottom: 3px;
             color: #045535;
             font-weight: 600;
+        }
+        .member-contact {
+            font-size: 12px;
+            margin-bottom: 2px;
+            color: #000000;
+            font-weight: 400;
+        }
+        .member-anchor {
+            font-size: 12px;
+            margin-bottom: 2px;
+            color: #045535;
+            font-weight: 600;
+            float: right;
+            padding: 3px;
+            border: 2px solid #045535;
+
+        }
+        .member-details .mdi {
+            color: #b40d0d;
         }
 
     
