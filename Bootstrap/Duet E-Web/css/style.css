@@ -2828,4 +2828,18 @@ textarea.form-control {
 }
 /* categories-ssection-admisiion for Undergraduate Admission page end here */
 
-/* Categories for Faculty of CE */
+/* Categories for Convocation*/
+/* categories-section-vol for publication page */
+.categories-section-convo{
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 250px;
+  height: 80px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  position: sticky;
+  top: 90px; /* Change this to your header height + some spacing */
+}
+.categories-title-convo{
+  padding-top: 13px;
+  font-weight: bold;
+}
